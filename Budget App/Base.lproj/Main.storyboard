@@ -135,18 +135,36 @@
                                     <navigationItem title="Spend" id="0dx-3C-bN7"/>
                                 </items>
                             </navigationBar>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9c-Fo-VdA">
+                                <rect key="frame" x="0.0" y="64" width="600" height="162"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-n8-FvA">
+                                <rect key="frame" x="277" y="513" width="45" height="30"/>
+                                <state key="normal" title="Spend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFc-eh-Ayk">
+                                <rect key="frame" x="252" y="488" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="U9c-Fo-VdA" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" constant="44" id="1gK-ak-k4t"/>
                             <constraint firstItem="zQM-BY-3MW" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" id="4bs-XI-WJ2"/>
                             <constraint firstAttribute="centerX" secondItem="zQM-BY-3MW" secondAttribute="centerX" id="D1Z-Sw-Ydf"/>
+                            <constraint firstAttribute="centerX" secondItem="mfm-n8-FvA" secondAttribute="centerX" id="JIP-QR-qIA"/>
                             <constraint firstItem="zQM-BY-3MW" firstAttribute="width" secondItem="RW2-oC-KqA" secondAttribute="width" id="Pdq-l3-YiS"/>
+                            <constraint firstAttribute="centerX" secondItem="U9c-Fo-VdA" secondAttribute="centerX" id="eOM-ha-WlQ"/>
+                            <constraint firstItem="zXg-G6-qSL" firstAttribute="top" secondItem="mfm-n8-FvA" secondAttribute="bottom" constant="8" id="wFk-gx-jMR"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xND-ix-Nhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091" y="-1063"/>
+            <point key="canvasLocation" x="2267" y="-381"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WSL-Xo-CNC">
@@ -163,14 +181,20 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MoW-jh-cZl">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="LLy-rP-Ltu">
+                                    <navigationItem title="Category Title" id="LLy-rP-Ltu">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="TMk-BJ-fsA"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vyj-7f-Ktx">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Vyj-7f-Ktx" firstAttribute="width" secondItem="CR0-gH-kNs" secondAttribute="width" id="3DW-q4-0Cc"/>
+                            <constraint firstAttribute="centerX" secondItem="Vyj-7f-Ktx" secondAttribute="centerX" id="Z8S-0W-RJm"/>
                             <constraint firstItem="MoW-jh-cZl" firstAttribute="width" secondItem="CR0-gH-kNs" secondAttribute="width" id="gEG-d2-fNz"/>
                             <constraint firstAttribute="centerX" secondItem="MoW-jh-cZl" secondAttribute="centerX" id="mKg-2b-guw"/>
                             <constraint firstItem="MoW-jh-cZl" firstAttribute="top" secondItem="i0P-Oy-yzd" secondAttribute="bottom" id="wai-SY-4Um"/>
@@ -179,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8a-F8-t5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091" y="-381"/>
+            <point key="canvasLocation" x="2205" y="-1093"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="She-hv-hgj">
