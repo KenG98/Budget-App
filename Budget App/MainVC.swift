@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+class MainVC: UITabBarController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        theBudget.printReport()
+    }
+}

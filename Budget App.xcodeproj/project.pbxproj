@@ -23,6 +23,7 @@
 		EEBB83F31AD5999700BD14AA /* ParticularCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83F21AD5999700BD14AA /* ParticularCategory.swift */; };
 		EEBB83F51AD599A200BD14AA /* ParticularSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83F41AD599A200BD14AA /* ParticularSpending.swift */; };
 		EEBB83F71AD599DC00BD14AA /* To Do in Resources */ = {isa = PBXBuildFile; fileRef = EEBB83F61AD599DC00BD14AA /* To Do */; };
+		EEBB83F91AD5B4F600BD14AA /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83F81AD5B4F600BD14AA /* GlobalVars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		EEBB83F21AD5999700BD14AA /* ParticularCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticularCategory.swift; sourceTree = "<group>"; };
 		EEBB83F41AD599A200BD14AA /* ParticularSpending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticularSpending.swift; sourceTree = "<group>"; };
 		EEBB83F61AD599DC00BD14AA /* To Do */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "To Do"; sourceTree = "<group>"; };
+		EEBB83F81AD5B4F600BD14AA /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				EE8C685B1AB0A24800641A7F /* AppDelegate.swift */,
 				EE8C685D1AB0A24800641A7F /* ViewController.swift */,
 				EE8C685F1AB0A24800641A7F /* Main.storyboard */,
+				EEBB83F81AD5B4F600BD14AA /* GlobalVars.swift */,
 				EEBB83F01AD5998A00BD14AA /* EntireBudget.swift */,
 				EEBB83F21AD5999700BD14AA /* ParticularCategory.swift */,
 				EEBB83F41AD599A200BD14AA /* ParticularSpending.swift */,
@@ -247,6 +250,7 @@
 				EE8C685E1AB0A24800641A7F /* ViewController.swift in Sources */,
 				EEBB83E91AD598A700BD14AA /* StatsVC.swift in Sources */,
 				EEBB83EF1AD5995000BD14AA /* CategoryVC.swift in Sources */,
+				EEBB83F91AD5B4F600BD14AA /* GlobalVars.swift in Sources */,
 				EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */,
 				EEBB83ED1AD5993900BD14AA /* OverviewVC.swift in Sources */,
 				EEBB83EB1AD598B600BD14AA /* SpendVC.swift in Sources */,

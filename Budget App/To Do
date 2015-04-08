@@ -5,3 +5,7 @@
 -Entire app (almost every view) needs access to the categories and the spendings. Consider 1) make a singleton of EntireBudget or 2) make the EntireBudget a global var available to all (and loaded on program start)
 
 -Need persistent data (to save our info)
+
+-Allow users to delete spendings or categories (table views will have indexes for us to use, but for now perhaps use a "name" key?")
+
+-"addSpending" in entire budget won't be necessary later. only for testing purposes. when there is a UI and a table we can just get the index of the cell the user tapped, we won't need anything else. Same for removing spendings (to add later)

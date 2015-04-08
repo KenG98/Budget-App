@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct ParticularSpending {
+    var amount: Double
+    var dateTime: NSDate
+    var memo: String
+    var name: String
+    
+    init(name: String, memo: String, dateTime: NSDate, amount: Double){
+        self.amount = amount
+        self.dateTime = dateTime
+        self.memo = memo
+        self.name = name
+    }
+}
