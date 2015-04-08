@@ -1,0 +1,7 @@
+- Consider making spendings or categories structs instead of classes
+
+-Entire Budget has an array of categories, every category has an array of spendings
+
+-Entire app (almost every view) needs access to the categories and the spendings. Consider 1) make a singleton of EntireBudget or 2) make the EntireBudget a global var available to all (and loaded on program start)
+
+-Need persistent data (to save our info)

@@ -13,6 +13,16 @@
 		EE8C68631AB0A24800641A7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8C68621AB0A24800641A7F /* Images.xcassets */; };
 		EE8C68661AB0A24800641A7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8C68641AB0A24800641A7F /* LaunchScreen.xib */; };
 		EE8C68721AB0A24800641A7F /* Budget_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C68711AB0A24800641A7F /* Budget_AppTests.swift */; };
+		EEBB83E51AD5989000BD14AA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83E41AD5989000BD14AA /* MainVC.swift */; };
+		EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */; };
+		EEBB83E91AD598A700BD14AA /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83E81AD598A700BD14AA /* StatsVC.swift */; };
+		EEBB83EB1AD598B600BD14AA /* SpendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83EA1AD598B600BD14AA /* SpendVC.swift */; };
+		EEBB83ED1AD5993900BD14AA /* OverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83EC1AD5993900BD14AA /* OverviewVC.swift */; };
+		EEBB83EF1AD5995000BD14AA /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83EE1AD5995000BD14AA /* CategoryVC.swift */; };
+		EEBB83F11AD5998A00BD14AA /* EntireBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83F01AD5998A00BD14AA /* EntireBudget.swift */; };
+		EEBB83F31AD5999700BD14AA /* ParticularCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83F21AD5999700BD14AA /* ParticularCategory.swift */; };
+		EEBB83F51AD599A200BD14AA /* ParticularSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB83F41AD599A200BD14AA /* ParticularSpending.swift */; };
+		EEBB83F71AD599DC00BD14AA /* To Do in Resources */ = {isa = PBXBuildFile; fileRef = EEBB83F61AD599DC00BD14AA /* To Do */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,16 @@
 		EE8C686B1AB0A24800641A7F /* Budget AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C68701AB0A24800641A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8C68711AB0A24800641A7F /* Budget_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget_AppTests.swift; sourceTree = "<group>"; };
+		EEBB83E41AD5989000BD14AA /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		EEBB83E81AD598A700BD14AA /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		EEBB83EA1AD598B600BD14AA /* SpendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendVC.swift; sourceTree = "<group>"; };
+		EEBB83EC1AD5993900BD14AA /* OverviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; };
+		EEBB83EE1AD5995000BD14AA /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		EEBB83F01AD5998A00BD14AA /* EntireBudget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntireBudget.swift; sourceTree = "<group>"; };
+		EEBB83F21AD5999700BD14AA /* ParticularCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticularCategory.swift; sourceTree = "<group>"; };
+		EEBB83F41AD599A200BD14AA /* ParticularSpending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticularSpending.swift; sourceTree = "<group>"; };
+		EEBB83F61AD599DC00BD14AA /* To Do */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "To Do"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +100,16 @@
 				EE8C685B1AB0A24800641A7F /* AppDelegate.swift */,
 				EE8C685D1AB0A24800641A7F /* ViewController.swift */,
 				EE8C685F1AB0A24800641A7F /* Main.storyboard */,
+				EEBB83F01AD5998A00BD14AA /* EntireBudget.swift */,
+				EEBB83F21AD5999700BD14AA /* ParticularCategory.swift */,
+				EEBB83F41AD599A200BD14AA /* ParticularSpending.swift */,
+				EEBB83EE1AD5995000BD14AA /* CategoryVC.swift */,
+				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
+				EEBB83EA1AD598B600BD14AA /* SpendVC.swift */,
+				EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */,
+				EEBB83E41AD5989000BD14AA /* MainVC.swift */,
+				EEBB83EC1AD5993900BD14AA /* OverviewVC.swift */,
+				EEBB83F61AD599DC00BD14AA /* To Do */,
 				EE8C68621AB0A24800641A7F /* Images.xcassets */,
 				EE8C68641AB0A24800641A7F /* LaunchScreen.xib */,
 				EE8C68591AB0A24800641A7F /* Supporting Files */,
@@ -195,6 +225,7 @@
 				EE8C68611AB0A24800641A7F /* Main.storyboard in Resources */,
 				EE8C68661AB0A24800641A7F /* LaunchScreen.xib in Resources */,
 				EE8C68631AB0A24800641A7F /* Images.xcassets in Resources */,
+				EEBB83F71AD599DC00BD14AA /* To Do in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +243,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBB83F31AD5999700BD14AA /* ParticularCategory.swift in Sources */,
 				EE8C685E1AB0A24800641A7F /* ViewController.swift in Sources */,
+				EEBB83E91AD598A700BD14AA /* StatsVC.swift in Sources */,
+				EEBB83EF1AD5995000BD14AA /* CategoryVC.swift in Sources */,
+				EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */,
+				EEBB83ED1AD5993900BD14AA /* OverviewVC.swift in Sources */,
+				EEBB83EB1AD598B600BD14AA /* SpendVC.swift in Sources */,
+				EEBB83E51AD5989000BD14AA /* MainVC.swift in Sources */,
+				EEBB83F51AD599A200BD14AA /* ParticularSpending.swift in Sources */,
 				EE8C685C1AB0A24800641A7F /* AppDelegate.swift in Sources */,
+				EEBB83F11AD5998A00BD14AA /* EntireBudget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +447,7 @@
 				EE8C68771AB0A24800641A7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE8C68781AB0A24800641A7F /* Build configuration list for PBXNativeTarget "Budget AppTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +456,7 @@
 				EE8C687A1AB0A24800641A7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
