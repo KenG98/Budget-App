@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ParticularCategory {
+class ParticularCategory: NSObject, NSCoding{
     var spendings: [ParticularSpending]
     var name: String
     var budget: Double
@@ -31,6 +31,18 @@ class ParticularCategory {
         self.name = name
         self.budget = budget
         spendings = []
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(spendings, forKey: "spendings")
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(budget, forKey: "budget")
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        self.spendings = aDecoder.decodeObjectForKey("spendings") as [ParticularSpending]
+        self.name = aDecoder.decodeObjectForKey("name") as String
+        self.budget = aDecoder.decodeObjectForKey("budget") as Double
     }
     
 }

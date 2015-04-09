@@ -45,7 +45,7 @@
         <!--Overview-->
         <scene sceneID="A0P-eN-nUv">
             <objects>
-                <viewController id="Pgr-w2-7H6" sceneMemberID="viewController">
+                <viewController id="Pgr-w2-7H6" customClass="OverviewVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YaT-7f-DOz"/>
                         <viewControllerLayoutGuide type="bottom" id="OCN-qd-Dmt"/>
@@ -63,8 +63,8 @@
                                     <segue destination="ZWO-2t-hv8" kind="show" id="WWp-d8-bca"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: $0 / $9,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-rR-9AL">
-                                <rect key="frame" x="234" y="484" width="133" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total: $0000 / $0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-rR-9AL">
+                                <rect key="frame" x="219" y="484" width="162" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -112,6 +112,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" id="PrO-Rj-oEc"/>
+                    <connections>
+                        <outlet property="totalLabel" destination="sDi-rR-9AL" id="OvL-dj-wOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVb-YW-Zu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

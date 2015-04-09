@@ -9,3 +9,7 @@
 -Allow users to delete spendings or categories (table views will have indexes for us to use, but for now perhaps use a "name" key?")
 
 -"addSpending" in entire budget won't be necessary later. only for testing purposes. when there is a UI and a table we can just get the index of the cell the user tapped, we won't need anything else. Same for removing spendings (to add later)
+
+-Maybe "saving" and "retreiving" should be done in the app delegate when the app opens and closes?
+
+-I implemented NSCoder not safely. Have to check for if objects don't exist
