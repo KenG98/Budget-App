@@ -54,14 +54,14 @@ class EntireBudget: NSObject, NSCoding{
         }
         return success
     }
-    
-    func addSpending(categoryName: String, name: String, memo: String, date: NSDate, amount: Double){
-        for cat in categories{
-            if cat.name == categoryName{
-                cat.addSpending(name, memo: memo, date: date, amount: amount)
-            }
-        }
-    }
+//    
+//    func addSpending(categoryName: String, name: String, memo: String, date: NSDate, amount: Double){
+//        for cat in categories{
+//            if cat.name == categoryName{
+//                cat.addSpending(name, memo: memo, date: date, amount: amount)
+//            }
+//        }
+//    }
     
 //    func save(){
 //        
@@ -92,12 +92,7 @@ class EntireBudget: NSObject, NSCoding{
         //load from saved file (or create an empty one if there isn't one now)
         
         //check if the period is over and its time to refresh the budget
-            //if so save the current data in some storage
-        
-        //populate categories variable
-        
-        //populate each category with its spendings
-        
+
         //test code below only
         
 //        addCategory("Entertainment", budget: 3000)
