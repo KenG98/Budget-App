@@ -13,11 +13,15 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var spendingsTable: UITableView!
     @IBOutlet weak var navBar: UINavigationBar!
     
-    var category = ParticularCategory(name: "Loading...", budget: 0)
+    var category = ParticularCategory(name: "Loading...", budget: 0) //change this later
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = category.name
+        navBar.topItem?.title = category.name
+    }
+    
+    @IBAction func backPressed(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,5 +33,15 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.textLabel?.text = category.spendings[indexPath.row].name
         cell.detailTextLabel?.text = "$\(category.spendings[indexPath.row].amount)"
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "spendingPressed"{
+            if let destination = segue.destinationViewController as? SpendingVC{
+                if let index = spendingsTable.indexPathForSelectedRow()?.row{
+                    destination.spending = category.spendings[index]
+                }
+            }
+        }
     }
 }

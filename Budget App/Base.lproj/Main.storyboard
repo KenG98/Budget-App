@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kpe-be-Vfa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Settings-->
@@ -126,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1427" y="-381"/>
         </scene>
-        <!--View Controller-->
+        <!--SpendVC-->
         <scene sceneID="CPb-Cw-c6h">
             <objects>
-                <viewController id="ZWO-2t-hv8" sceneMemberID="viewController">
+                <viewController id="ZWO-2t-hv8" customClass="SpendVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XCc-wA-jSI"/>
                         <viewControllerLayoutGuide type="bottom" id="zXg-G6-qSL"/>
@@ -141,39 +142,82 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQM-BY-3MW">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Spend" id="0dx-3C-bN7"/>
+                                    <navigationItem title="Spend" id="0dx-3C-bN7">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="WO7-yA-CBO">
+                                            <connections>
+                                                <action selector="backPressed:" destination="ZWO-2t-hv8" id="jhM-4h-cjJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9c-Fo-VdA">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9c-Fo-VdA">
                                 <rect key="frame" x="0.0" y="64" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZWO-2t-hv8" id="s3O-wE-3vX"/>
+                                    <outlet property="delegate" destination="ZWO-2t-hv8" id="PWd-M6-9MM"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-n8-FvA">
-                                <rect key="frame" x="277" y="513" width="45" height="30"/>
+                                <rect key="frame" x="278" y="272" width="45" height="30"/>
                                 <state key="normal" title="Spend">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFc-eh-Ayk">
-                                <rect key="frame" x="252" y="488" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFc-eh-Ayk">
+                                <rect key="frame" x="104" y="234" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount: $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU9-CX-nTX">
+                                <rect key="frame" x="16" y="238" width="79.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="U9c-Fo-VdA" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" constant="44" id="1gK-ak-k4t"/>
                             <constraint firstItem="zQM-BY-3MW" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" id="4bs-XI-WJ2"/>
+                            <constraint firstAttribute="centerX" secondItem="mfm-n8-FvA" secondAttribute="centerX" constant="-0.5" id="6Fu-ck-pyc"/>
                             <constraint firstAttribute="centerX" secondItem="zQM-BY-3MW" secondAttribute="centerX" id="D1Z-Sw-Ydf"/>
-                            <constraint firstAttribute="centerX" secondItem="mfm-n8-FvA" secondAttribute="centerX" id="JIP-QR-qIA"/>
+                            <constraint firstItem="zU9-CX-nTX" firstAttribute="leading" secondItem="RW2-oC-KqA" secondAttribute="leadingMargin" id="N1g-mt-55f"/>
                             <constraint firstItem="zQM-BY-3MW" firstAttribute="width" secondItem="RW2-oC-KqA" secondAttribute="width" id="Pdq-l3-YiS"/>
+                            <constraint firstAttribute="centerX" secondItem="U9c-Fo-VdA" secondAttribute="centerX" id="QT3-QI-WXo"/>
+                            <constraint firstItem="mfm-n8-FvA" firstAttribute="top" secondItem="yFc-eh-Ayk" secondAttribute="bottom" constant="8" id="YE6-Ef-cA4"/>
+                            <constraint firstItem="yFc-eh-Ayk" firstAttribute="leading" secondItem="zU9-CX-nTX" secondAttribute="trailing" constant="8" id="ZFQ-5X-0e5"/>
+                            <constraint firstItem="U9c-Fo-VdA" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" constant="44" id="bKt-ri-uMj"/>
                             <constraint firstAttribute="centerX" secondItem="U9c-Fo-VdA" secondAttribute="centerX" id="eOM-ha-WlQ"/>
-                            <constraint firstItem="zXg-G6-qSL" firstAttribute="top" secondItem="mfm-n8-FvA" secondAttribute="bottom" constant="8" id="wFk-gx-jMR"/>
+                            <constraint firstItem="zXg-G6-qSL" firstAttribute="top" secondItem="zU9-CX-nTX" secondAttribute="bottom" constant="71" id="fTo-Dc-tpR"/>
+                            <constraint firstItem="yFc-eh-Ayk" firstAttribute="top" secondItem="U9c-Fo-VdA" secondAttribute="bottom" constant="8" id="hhB-Rm-hqI"/>
+                            <constraint firstItem="zXg-G6-qSL" firstAttribute="top" secondItem="mfm-n8-FvA" secondAttribute="bottom" constant="28" id="kgJ-2y-r3w"/>
+                            <constraint firstItem="yFc-eh-Ayk" firstAttribute="trailing" secondItem="RW2-oC-KqA" secondAttribute="trailingMargin" id="oVG-Dq-hfm"/>
+                            <constraint firstAttribute="width" secondItem="U9c-Fo-VdA" secondAttribute="width" id="pW0-qC-yNd"/>
+                            <constraint firstItem="zXg-G6-qSL" firstAttribute="top" secondItem="yFc-eh-Ayk" secondAttribute="bottom" constant="66" id="sEv-cg-Tji"/>
+                            <constraint firstAttribute="centerX" secondItem="U9c-Fo-VdA" secondAttribute="centerX" constant="110" id="t1d-5y-lo1"/>
+                            <constraint firstItem="zU9-CX-nTX" firstAttribute="top" secondItem="U9c-Fo-VdA" secondAttribute="bottom" constant="12.5" id="uXu-zw-b7K"/>
+                            <constraint firstAttribute="width" secondItem="U9c-Fo-VdA" secondAttribute="width" id="x8f-ni-YhZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1gK-ak-k4t"/>
+                                <exclude reference="eOM-ha-WlQ"/>
+                                <exclude reference="t1d-5y-lo1"/>
+                                <exclude reference="x8f-ni-YhZ"/>
+                                <exclude reference="fTo-Dc-tpR"/>
+                                <exclude reference="kgJ-2y-r3w"/>
+                                <exclude reference="sEv-cg-Tji"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="categoryPicker" destination="U9c-Fo-VdA" id="xEX-DE-6GQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xND-ix-Nhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2267" y="-381"/>
+            <point key="canvasLocation" x="2205" y="-381"/>
         </scene>
         <!--CategoryVC-->
         <scene sceneID="WSL-Xo-CNC">
@@ -192,6 +236,11 @@
                                 <items>
                                     <navigationItem title="Category Title" id="LLy-rP-Ltu">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="TMk-BJ-fsA"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="GSj-Ip-WlP">
+                                            <connections>
+                                                <action selector="backPressed:" destination="MQ1-pu-Zfb" id="5m9-nk-2ND"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -219,6 +268,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jiA-BX-EhE" kind="show" identifier="spendingPressed" id="pr8-EX-LcK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -244,6 +296,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8a-F8-t5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2205" y="-1093"/>
+        </scene>
+        <!--SpendingVC-->
+        <scene sceneID="htN-x9-LdH">
+            <objects>
+                <viewController id="jiA-BX-EhE" customClass="SpendingVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4D3-qn-CEI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZHR-aN-nGB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8oa-Go-FDF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0B-1h-goZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Spending Name" id="qjv-Du-xFn">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="hm9-cF-sVX">
+                                            <connections>
+                                                <action selector="backPressed:" destination="jiA-BX-EhE" id="5oi-KY-upp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="O0B-1h-goZ" secondAttribute="width" id="Qt6-5v-K04"/>
+                            <constraint firstAttribute="centerX" secondItem="O0B-1h-goZ" secondAttribute="centerX" id="kM1-vR-XK2"/>
+                            <constraint firstItem="O0B-1h-goZ" firstAttribute="top" secondItem="4D3-qn-CEI" secondAttribute="bottom" id="z7V-rG-WXj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="O0B-1h-goZ" id="Sbt-UK-mTZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYm-29-NGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2941" y="-1093"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="She-hv-hgj">

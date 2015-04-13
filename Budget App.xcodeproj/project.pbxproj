@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77CBF31ADB5116008FE01A /* SpendingVC.swift */; };
 		EE8C685C1AB0A24800641A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C685B1AB0A24800641A7F /* AppDelegate.swift */; };
 		EE8C685E1AB0A24800641A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C685D1AB0A24800641A7F /* ViewController.swift */; };
 		EE8C68611AB0A24800641A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8C685F1AB0A24800641A7F /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE77CBF31ADB5116008FE01A /* SpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingVC.swift; sourceTree = "<group>"; };
 		EE8C68561AB0A24800641A7F /* Budget App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C685A1AB0A24800641A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8C685B1AB0A24800641A7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,9 +110,10 @@
 				EEBB83F41AD599A200BD14AA /* ParticularSpending.swift */,
 				EEBB83EC1AD5993900BD14AA /* OverviewVC.swift */,
 				EEBB83EE1AD5995000BD14AA /* CategoryVC.swift */,
-				EEBB83F61AD599DC00BD14AA /* To Do */,
-				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
 				EEBB83EA1AD598B600BD14AA /* SpendVC.swift */,
+				EEBB83F61AD599DC00BD14AA /* To Do */,
+				EE77CBF31ADB5116008FE01A /* SpendingVC.swift */,
+				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
 				EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */,
 				EEBB83E41AD5989000BD14AA /* MainVC.swift */,
 				EE8C68621AB0A24800641A7F /* Images.xcassets */,
@@ -252,6 +255,7 @@
 				EEBB83EF1AD5995000BD14AA /* CategoryVC.swift in Sources */,
 				EEBB83F91AD5B4F600BD14AA /* GlobalVars.swift in Sources */,
 				EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */,
+				EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */,
 				EEBB83ED1AD5993900BD14AA /* OverviewVC.swift in Sources */,
 				EEBB83EB1AD598B600BD14AA /* SpendVC.swift in Sources */,
 				EEBB83E51AD5989000BD14AA /* MainVC.swift in Sources */,
