@@ -40,9 +40,9 @@ class ParticularCategory: NSObject, NSCoding{
     }
     
     required init(coder aDecoder: NSCoder) {
-        self.spendings = aDecoder.decodeObjectForKey("spendings") as [ParticularSpending]
-        self.name = aDecoder.decodeObjectForKey("name") as String
-        self.budget = aDecoder.decodeObjectForKey("budget") as Double
+        self.spendings = aDecoder.decodeObjectForKey("spendings") as! [ParticularSpending]
+        self.name = aDecoder.decodeObjectForKey("name") as! String
+        self.budget = aDecoder.decodeObjectForKey("budget") as! Double
     }
     
 }

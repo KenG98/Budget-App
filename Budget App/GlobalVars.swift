@@ -18,6 +18,6 @@ func saveBudget(){
 func loadBudget(){
     let budgetData = NSUserDefaults.standardUserDefaults().objectForKey("budgetData") as? NSData
     if (budgetData != nil){
-        theBudget = NSKeyedUnarchiver.unarchiveObjectWithData(budgetData!) as EntireBudget
+        theBudget = NSKeyedUnarchiver.unarchiveObjectWithData(budgetData!) as! EntireBudget
     }
 }

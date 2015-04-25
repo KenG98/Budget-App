@@ -29,9 +29,9 @@ class ParticularSpending: NSObject, NSCoding {
     }
     
     required init(coder aDecoder: NSCoder) {
-        self.amount = aDecoder.decodeObjectForKey("amount") as Double
-        self.dateTime = aDecoder.decodeObjectForKey("dateTime") as NSDate
-        self.memo = aDecoder.decodeObjectForKey("memo") as String
-        self.name = aDecoder.decodeObjectForKey("name") as String
+        self.amount = aDecoder.decodeObjectForKey("amount") as! Double
+        self.dateTime = aDecoder.decodeObjectForKey("dateTime") as! NSDate
+        self.memo = aDecoder.decodeObjectForKey("memo") as! String
+        self.name = aDecoder.decodeObjectForKey("name") as! String
     }
 }

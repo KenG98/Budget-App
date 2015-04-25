@@ -23,7 +23,7 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.categoryTableView.dequeueReusableCellWithIdentifier("categorizedCell") as UITableViewCell
+        var cell:UITableViewCell = self.categoryTableView.dequeueReusableCellWithIdentifier("categorizedCell") as! UITableViewCell
         cell.textLabel?.text = theBudget.categories[indexPath.row].name
         cell.detailTextLabel?.text = "$\(theBudget.categories[indexPath.row].moneySpent) / $\(theBudget.categories[indexPath.row].budget)"
         return cell
