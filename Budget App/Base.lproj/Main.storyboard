@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kpe-be-Vfa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kpe-be-Vfa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -158,38 +158,58 @@
                                     <outlet property="delegate" destination="ZWO-2t-hv8" id="PWd-M6-9MM"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-n8-FvA">
-                                <rect key="frame" x="278" y="272" width="45" height="30"/>
-                                <state key="normal" title="Spend">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFc-eh-Ayk">
                                 <rect key="frame" x="104" y="234" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount: $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU9-CX-nTX">
-                                <rect key="frame" x="16" y="238" width="79.5" height="20.5"/>
+                                <rect key="frame" x="16" y="238" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="472-FV-Mdi">
+                                <rect key="frame" x="16" y="283" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-JZ-kLi">
+                                <rect key="frame" x="73" y="279" width="511" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-n8-FvA">
+                                <rect key="frame" x="278" y="314" width="45" height="30"/>
+                                <state key="normal" title="Spend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="spendPressed:" destination="ZWO-2t-hv8" eventType="touchUpInside" id="Gpd-Ja-xYH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WI4-JZ-kLi" firstAttribute="trailing" secondItem="RW2-oC-KqA" secondAttribute="trailingMargin" id="0m8-Ob-9Ff"/>
+                            <constraint firstItem="WI4-JZ-kLi" firstAttribute="leading" secondItem="472-FV-Mdi" secondAttribute="trailing" constant="2" id="0tX-oO-z3a"/>
                             <constraint firstItem="U9c-Fo-VdA" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" constant="44" id="1gK-ak-k4t"/>
                             <constraint firstItem="zQM-BY-3MW" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" id="4bs-XI-WJ2"/>
                             <constraint firstAttribute="centerX" secondItem="mfm-n8-FvA" secondAttribute="centerX" constant="-0.5" id="6Fu-ck-pyc"/>
                             <constraint firstAttribute="centerX" secondItem="zQM-BY-3MW" secondAttribute="centerX" id="D1Z-Sw-Ydf"/>
+                            <constraint firstItem="WI4-JZ-kLi" firstAttribute="top" secondItem="yFc-eh-Ayk" secondAttribute="bottom" constant="15" id="Dop-Vw-pZk"/>
+                            <constraint firstItem="472-FV-Mdi" firstAttribute="top" secondItem="zU9-CX-nTX" secondAttribute="bottom" constant="24" id="ESZ-0l-15o"/>
                             <constraint firstItem="zU9-CX-nTX" firstAttribute="leading" secondItem="RW2-oC-KqA" secondAttribute="leadingMargin" id="N1g-mt-55f"/>
                             <constraint firstItem="zQM-BY-3MW" firstAttribute="width" secondItem="RW2-oC-KqA" secondAttribute="width" id="Pdq-l3-YiS"/>
                             <constraint firstAttribute="centerX" secondItem="U9c-Fo-VdA" secondAttribute="centerX" id="QT3-QI-WXo"/>
                             <constraint firstItem="mfm-n8-FvA" firstAttribute="top" secondItem="yFc-eh-Ayk" secondAttribute="bottom" constant="8" id="YE6-Ef-cA4"/>
                             <constraint firstItem="yFc-eh-Ayk" firstAttribute="leading" secondItem="zU9-CX-nTX" secondAttribute="trailing" constant="8" id="ZFQ-5X-0e5"/>
                             <constraint firstItem="U9c-Fo-VdA" firstAttribute="top" secondItem="XCc-wA-jSI" secondAttribute="bottom" constant="44" id="bKt-ri-uMj"/>
+                            <constraint firstItem="472-FV-Mdi" firstAttribute="leading" secondItem="RW2-oC-KqA" secondAttribute="leadingMargin" id="cNO-ON-VBf"/>
                             <constraint firstAttribute="centerX" secondItem="U9c-Fo-VdA" secondAttribute="centerX" id="eOM-ha-WlQ"/>
                             <constraint firstItem="zXg-G6-qSL" firstAttribute="top" secondItem="zU9-CX-nTX" secondAttribute="bottom" constant="71" id="fTo-Dc-tpR"/>
+                            <constraint firstItem="mfm-n8-FvA" firstAttribute="top" secondItem="WI4-JZ-kLi" secondAttribute="bottom" constant="5" id="fXN-nJ-47p"/>
                             <constraint firstItem="yFc-eh-Ayk" firstAttribute="top" secondItem="U9c-Fo-VdA" secondAttribute="bottom" constant="8" id="hhB-Rm-hqI"/>
                             <constraint firstItem="zXg-G6-qSL" firstAttribute="top" secondItem="mfm-n8-FvA" secondAttribute="bottom" constant="28" id="kgJ-2y-r3w"/>
                             <constraint firstItem="yFc-eh-Ayk" firstAttribute="trailing" secondItem="RW2-oC-KqA" secondAttribute="trailingMargin" id="oVG-Dq-hfm"/>
@@ -205,6 +225,7 @@
                                 <exclude reference="eOM-ha-WlQ"/>
                                 <exclude reference="t1d-5y-lo1"/>
                                 <exclude reference="x8f-ni-YhZ"/>
+                                <exclude reference="YE6-Ef-cA4"/>
                                 <exclude reference="fTo-Dc-tpR"/>
                                 <exclude reference="kgJ-2y-r3w"/>
                                 <exclude reference="sEv-cg-Tji"/>
@@ -212,7 +233,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="amountBox" destination="yFc-eh-Ayk" id="ViQ-qN-Rn1"/>
                         <outlet property="categoryPicker" destination="U9c-Fo-VdA" id="xEX-DE-6GQ"/>
+                        <outlet property="nameBox" destination="WI4-JZ-kLi" id="4Lh-Fs-Pm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xND-ix-Nhv" userLabel="First Responder" sceneMemberID="firstResponder"/>

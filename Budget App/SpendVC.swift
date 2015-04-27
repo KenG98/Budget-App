@@ -11,8 +11,14 @@ import UIKit
 
 class SpendVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
+    @IBOutlet weak var nameBox: UITextField!
+    @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var categoryPicker: UIPickerView!
 
+    @IBAction func spendPressed(sender: UIButton) {
+        theBudget.categories[categoryPicker.selectedRowInComponent(0)].addSpending(nameBox.text, memo: " ", date: NSDate(), amount: (amountBox.text as NSString).doubleValue) //add memo later
+    }
+    
     @IBAction func backPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
