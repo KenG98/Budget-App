@@ -16,7 +16,20 @@ class SpendVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     @IBOutlet weak var categoryPicker: UIPickerView!
 
     @IBAction func spendPressed(sender: UIButton) {
-        theBudget.categories[categoryPicker.selectedRowInComponent(0)].addSpending(nameBox.text, memo: " ", date: NSDate(), amount: (amountBox.text as NSString).doubleValue) //add memo later
+        var purchaseName = nameBox.text
+        if purchaseName == "" {
+            purchaseName = "Default"
+        }
+        if amountBox.text == "" {
+            let alert = UIAlertView()
+            alert.title = "Spend"
+            alert.message = "Invalid entry. Must enter amount."
+            alert.addButtonWithTitle("Okay")
+            alert.show()
+        }else{
+            theBudget.categories[categoryPicker.selectedRowInComponent(0)].addSpending(purchaseName, memo: " ", date: NSDate(), amount: (amountBox.text as NSString).doubleValue) //add memo later
+        }
+        
     }
     
     @IBAction func backPressed(sender: UIBarButtonItem) {
