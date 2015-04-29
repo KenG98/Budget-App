@@ -16,6 +16,10 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         totalLabel.text = "Total: $\(theBudget.totalSpent) / $\(theBudget.totalBudget)"
+        var path = categoryTableView.indexPathForSelectedRow()
+        if let deselectPath = path {
+           categoryTableView.deselectRowAtIndexPath(deselectPath, animated: true)
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
