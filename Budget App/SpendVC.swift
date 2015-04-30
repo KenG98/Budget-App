@@ -14,6 +14,7 @@ class SpendVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     @IBOutlet weak var nameBox: UITextField!
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBOutlet weak var memoBox: UITextView!
 
     @IBAction func spendPressed(sender: UIButton) {
         var purchaseName = nameBox.text
@@ -27,8 +28,9 @@ class SpendVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
             alert.addButtonWithTitle("Okay")
             alert.show()
         }else{
-            theBudget.categories[categoryPicker.selectedRowInComponent(0)].addSpending(purchaseName, memo: " ", date: NSDate(), amount: (amountBox.text as NSString).doubleValue) //add memo later
+            theBudget.categories[categoryPicker.selectedRowInComponent(0)].addSpending(purchaseName, memo: memoBox.text, date: NSDate(), amount: (amountBox.text as NSString).doubleValue) //add memo later
             dismissViewControllerAnimated(true, completion: nil)
+            saveBudget()
         }
     }
     

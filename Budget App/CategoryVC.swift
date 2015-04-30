@@ -20,6 +20,14 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         navBar.topItem?.title = category.name
     }
     
+    override func viewWillAppear(animated: Bool) {
+        var path = spendingsTable.indexPathForSelectedRow()
+        if let deselectPath = path {
+            spendingsTable.deselectRowAtIndexPath(deselectPath, animated: true)
+        }
+
+    }
+    
     @IBAction func backPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
