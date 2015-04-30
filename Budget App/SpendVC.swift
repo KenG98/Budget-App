@@ -28,8 +28,8 @@ class SpendVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
             alert.show()
         }else{
             theBudget.categories[categoryPicker.selectedRowInComponent(0)].addSpending(purchaseName, memo: " ", date: NSDate(), amount: (amountBox.text as NSString).doubleValue) //add memo later
+            dismissViewControllerAnimated(true, completion: nil)
         }
-        
     }
     
     @IBAction func backPressed(sender: UIBarButtonItem) {
