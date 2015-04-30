@@ -20,6 +20,7 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if let deselectPath = path {
            categoryTableView.deselectRowAtIndexPath(deselectPath, animated: true)
         }
+        categoryTableView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
