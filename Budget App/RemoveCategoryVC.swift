@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBAction func cancelClicked(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     func numberOfComponentsInPickerView(pickerView:     UIPickerView) -> Int {
         return 1
     }
@@ -22,6 +25,8 @@ class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         return theBudget.categories[row].name
     }
     @IBAction func deleteClicked(sender: UIButton) {
-        
+        theBudget.removeCategory(categoryPicker.selectedRowInComponent(0))
+        dismissViewControllerAnimated(true, completion: nil) //Not sure yet if I want this but I'll leave it in for now
+        saveBudget()
     }
 }
