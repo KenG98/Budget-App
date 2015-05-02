@@ -6,6 +6,47 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--How To UseVC-->
+        <scene sceneID="bVA-yA-sgF">
+            <objects>
+                <viewController id="rr4-Kr-23P" customClass="HowToUseVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8yQ-H4-2NV"/>
+                        <viewControllerLayoutGuide type="bottom" id="CHJ-o9-Cn7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZH8-Qw-v7V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-Q1-Usi">
+                                <rect key="frame" x="7" y="83" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Thanks for downloading our budgeting app! This app allows you to keep track of your budget by splitting it up into different categories. You set the period you want for your spending (e.g one month) and the amount of money you want to spend per period on that category. Then, whenever you buy something you simply click the spend button, choose which category to put it in, how much it cost, and write yourself a memo if you want. The stats section allows you to see a graph of your spending habbits.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDy-lF-y7L">
+                                <rect key="frame" x="547" y="28" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneClicked:" destination="rr4-Kr-23P" eventType="touchUpInside" id="H9D-H3-3EW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nDy-lF-y7L" secondAttribute="centerX" constant="-265.5" id="Lsg-aO-bOL"/>
+                            <constraint firstAttribute="centerY" secondItem="nDy-lF-y7L" secondAttribute="centerY" constant="257" id="ltj-YA-6oi"/>
+                            <constraint firstAttribute="centerX" secondItem="EM5-Q1-Usi" secondAttribute="centerX" constant="-7" id="n7O-kC-p8Y"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pN-89-1TQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="1006"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="O6b-vo-wa8">
             <objects>
@@ -23,6 +64,9 @@
                                 <state key="normal" title="How to use">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rr4-Kr-23P" kind="show" id="FqV-sl-cMU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-Wk-Pj6">
                                 <rect key="frame" x="16" y="66" width="95" height="30"/>

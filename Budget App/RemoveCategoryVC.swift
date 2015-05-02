@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBAction func cancelClicked(sender: UIButton) {
@@ -26,7 +27,7 @@ class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     @IBAction func deleteClicked(sender: UIButton) {
         theBudget.removeCategory(categoryPicker.selectedRowInComponent(0))
-        dismissViewControllerAnimated(true, completion: nil) //Not sure yet if I want this but I'll leave it in for now
+        dismissViewControllerAnimated(true, completion: nil) //Only does this for now because I can't get the cancel button to show up
         saveBudget()
     }
 }
