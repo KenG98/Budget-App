@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kpe-be-Vfa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,34 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-Q1-Usi">
-                                <rect key="frame" x="7" y="83" width="600" height="600"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-Q1-Usi">
+                                <rect key="frame" x="16" y="64" width="568" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Thanks for downloading our budgeting app! This app allows you to keep track of your budget by splitting it up into different categories. You set the period you want for your spending (e.g one month) and the amount of money you want to spend per period on that category. Then, whenever you buy something you simply click the spend button, choose which category to put it in, how much it cost, and write yourself a memo if you want. The stats section allows you to see a graph of your spending habbits.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDy-lF-y7L">
-                                <rect key="frame" x="547" y="28" width="37" height="30"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doneClicked:" destination="rr4-Kr-23P" eventType="touchUpInside" id="H9D-H3-3EW"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ca-EW-caU">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="How To Use" id="IAP-ey-88f">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="Zjr-f7-ahb">
+                                            <connections>
+                                                <action selector="doneClicked:" destination="rr4-Kr-23P" id="anF-Fp-h5y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="nDy-lF-y7L" secondAttribute="centerX" constant="-265.5" id="Lsg-aO-bOL"/>
-                            <constraint firstAttribute="centerY" secondItem="nDy-lF-y7L" secondAttribute="centerY" constant="257" id="ltj-YA-6oi"/>
+                            <constraint firstItem="CHJ-o9-Cn7" firstAttribute="top" secondItem="EM5-Q1-Usi" secondAttribute="bottom" constant="8" id="4E7-0i-o3n"/>
+                            <constraint firstItem="EM5-Q1-Usi" firstAttribute="leading" secondItem="ZH8-Qw-v7V" secondAttribute="leadingMargin" id="JsL-AP-n3J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Ca-EW-caU" secondAttribute="trailing" constant="-16" id="Miu-Gk-rId"/>
+                            <constraint firstItem="1Ca-EW-caU" firstAttribute="leading" secondItem="ZH8-Qw-v7V" secondAttribute="leadingMargin" constant="-16" id="VuK-sJ-stj"/>
+                            <constraint firstItem="EM5-Q1-Usi" firstAttribute="top" secondItem="8yQ-H4-2NV" secondAttribute="bottom" constant="44" id="XpN-TW-bzg"/>
+                            <constraint firstItem="1Ca-EW-caU" firstAttribute="top" secondItem="8yQ-H4-2NV" secondAttribute="bottom" id="byY-JX-XcC"/>
                             <constraint firstAttribute="centerX" secondItem="EM5-Q1-Usi" secondAttribute="centerX" constant="-7" id="n7O-kC-p8Y"/>
+                            <constraint firstItem="EM5-Q1-Usi" firstAttribute="trailing" secondItem="ZH8-Qw-v7V" secondAttribute="trailingMargin" id="pUB-jU-Dgz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="n7O-kC-p8Y"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pN-89-1TQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="1006"/>
+            <point key="canvasLocation" x="2180" y="1702"/>
         </scene>
         <!--Settings-->
         <scene sceneID="O6b-vo-wa8">
@@ -119,33 +131,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N13-Es-8o4">
-                                <rect key="frame" x="98" y="64" width="405" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N13-Es-8o4">
+                                <rect key="frame" x="0.0" y="64" width="600" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="TVK-TQ-NPh" id="jfz-Ug-z8l"/>
                                     <outlet property="delegate" destination="TVK-TQ-NPh" id="sTM-Ej-Wfj"/>
                                 </connections>
                             </pickerView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fk6-uj-8ym">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Remove Category" id="K79-IR-hzD">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="uVw-ar-byN">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gnf-nt-xTN">
-                                                <rect key="frame" x="16" y="64" width="53" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Cancel">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="cancelClicked:" destination="TVK-TQ-NPh" eventType="touchUpInside" id="i4s-HZ-KYy"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCA-pV-zty">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCA-pV-zty">
                                 <rect key="frame" x="278" y="234" width="44" height="30"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,19 +147,37 @@
                                     <action selector="deleteClicked:" destination="TVK-TQ-NPh" eventType="touchUpInside" id="s8D-xv-Teg"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fk6-uj-8ym">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Remove Category" id="K79-IR-hzD">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OID-bv-aAu">
+                                            <connections>
+                                                <action selector="cancelClicked:" destination="TVK-TQ-NPh" id="bwC-td-SmG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fk6-uj-8ym" firstAttribute="top" secondItem="MTd-8T-0ED" secondAttribute="bottom" id="2EA-Al-IHH"/>
                             <constraint firstAttribute="centerX" secondItem="fk6-uj-8ym" secondAttribute="centerX" id="3Xl-i4-aoM"/>
-                            <constraint firstAttribute="centerX" secondItem="N13-Es-8o4" secondAttribute="centerX" constant="-0.5" id="Bse-Qt-08L"/>
-                            <constraint firstItem="N13-Es-8o4" firstAttribute="width" secondItem="jqH-W8-6ww" secondAttribute="height" multiplier="27:40" id="C6x-Ld-XHY"/>
-                            <constraint firstAttribute="centerY" secondItem="N13-Es-8o4" secondAttribute="centerY" constant="199" id="GRQ-Xf-rGT"/>
+                            <constraint firstItem="fk6-uj-8ym" firstAttribute="leading" secondItem="jqH-W8-6ww" secondAttribute="leadingMargin" constant="-16" id="KMt-dd-bR4"/>
+                            <constraint firstItem="aCA-pV-zty" firstAttribute="top" secondItem="N13-Es-8o4" secondAttribute="bottom" constant="8" id="OI7-CF-ELq"/>
                             <constraint firstAttribute="centerY" secondItem="aCA-pV-zty" secondAttribute="centerY" constant="68" id="OWz-pw-8lS"/>
-                            <constraint firstAttribute="centerY" secondItem="N13-Es-8o4" secondAttribute="centerY" constant="199" id="pWJ-1O-uqA"/>
-                            <constraint firstAttribute="centerY" secondItem="N13-Es-8o4" secondAttribute="centerY" constant="199" id="qkx-bh-eWn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fk6-uj-8ym" secondAttribute="trailing" constant="-16" id="TVS-mX-me8"/>
+                            <constraint firstItem="N13-Es-8o4" firstAttribute="top" secondItem="MTd-8T-0ED" secondAttribute="bottom" constant="44" id="WgR-9W-3cW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N13-Es-8o4" secondAttribute="trailing" constant="-16" id="Y4I-8o-ulX"/>
+                            <constraint firstItem="N13-Es-8o4" firstAttribute="leading" secondItem="jqH-W8-6ww" secondAttribute="leadingMargin" constant="-16" id="wua-Sh-EFw"/>
                             <constraint firstAttribute="centerX" secondItem="aCA-pV-zty" secondAttribute="centerX" id="xqJ-tr-Vca"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OWz-pw-8lS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="categoryPicker" destination="N13-Es-8o4" id="pbk-re-tki"/>
@@ -174,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H55-WL-q5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1427" y="1829"/>
+            <point key="canvasLocation" x="1521" y="1975"/>
         </scene>
         <!--Add CategoryVC-->
         <scene sceneID="Nkw-ZG-05I">
