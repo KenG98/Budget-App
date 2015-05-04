@@ -19,12 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-Q1-Usi">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="66" width="600" height="446"/>
+=======
+                                <rect key="frame" x="7" y="83" width="600" height="600"/>
+>>>>>>> parent of 39dae32... Changed constrains, changed buttons
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Thanks for downloading our budgeting app! This app allows you to keep track of your budget by splitting it up into different categories. You set the period you want for your spending (e.g one month) and the amount of money you want to spend per period on that category. Then, whenever you buy something you simply click the spend button, choose which category to put it in, how much it cost, and write yourself a memo if you want. The stats section allows you to see a graph of your spending habbits.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+<<<<<<< HEAD
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toQ-rM-DoS">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
@@ -48,6 +53,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="toQ-rM-DoS" secondAttribute="centerX" id="DgP-3e-bHE"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDy-lF-y7L">
+                                <rect key="frame" x="547" y="28" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneClicked:" destination="rr4-Kr-23P" eventType="touchUpInside" id="H9D-H3-3EW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nDy-lF-y7L" secondAttribute="centerX" constant="-265.5" id="Lsg-aO-bOL"/>
+                            <constraint firstAttribute="centerY" secondItem="nDy-lF-y7L" secondAttribute="centerY" constant="257" id="ltj-YA-6oi"/>
+>>>>>>> parent of 39dae32... Changed constrains, changed buttons
                             <constraint firstAttribute="centerX" secondItem="EM5-Q1-Usi" secondAttribute="centerX" constant="-7" id="n7O-kC-p8Y"/>
                         </constraints>
                     </view>

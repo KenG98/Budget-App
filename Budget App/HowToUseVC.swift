@@ -11,7 +11,7 @@ import UIKit
 
 class HowToUseVC: UIViewController{
     
-    @IBAction func doneClicked(sender: UIBarButtonItem) {
+    @IBAction func doneClicked(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 }
