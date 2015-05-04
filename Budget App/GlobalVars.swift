@@ -21,3 +21,9 @@ func loadBudget(){
         theBudget = NSKeyedUnarchiver.unarchiveObjectWithData(budgetData!) as! EntireBudget
     }
 }
+
+extension Double{
+    var moneyString: NSString {
+        return NSString(format: "%.2f", self)
+    }
+}

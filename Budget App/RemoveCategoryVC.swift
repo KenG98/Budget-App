@@ -11,7 +11,8 @@ import UIKit
 
 class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     @IBOutlet weak var categoryPicker: UIPickerView!
-    @IBAction func cancelClicked(sender: UIButton) {
+    
+    @IBAction func cancelClicked(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     func numberOfComponentsInPickerView(pickerView:     UIPickerView) -> Int {
