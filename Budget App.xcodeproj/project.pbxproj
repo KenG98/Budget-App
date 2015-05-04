@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1EDE09C41AF40425003AF18D /* RemoveCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */; };
 		1EDE09C71AF57A61003AF18D /* HowToUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */; };
-		1EDE09C91AF58014003AF18D /* ChangePeriodAndDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C81AF58014003AF18D /* ChangePeriodAndDateVC.swift */; };
 		EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77CBF31ADB5116008FE01A /* SpendingVC.swift */; };
 		EE8C685C1AB0A24800641A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C685B1AB0A24800641A7F /* AppDelegate.swift */; };
 		EE8C685E1AB0A24800641A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C685D1AB0A24800641A7F /* ViewController.swift */; };
@@ -44,7 +43,6 @@
 /* Begin PBXFileReference section */
 		1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveCategoryVC.swift; sourceTree = "<group>"; };
 		1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseVC.swift; sourceTree = "<group>"; };
-		1EDE09C81AF58014003AF18D /* ChangePeriodAndDateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePeriodAndDateVC.swift; sourceTree = "<group>"; };
 		EE77CBF31ADB5116008FE01A /* SpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingVC.swift; sourceTree = "<group>"; };
 		EE8C68561AB0A24800641A7F /* Budget App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C685A1AB0A24800641A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				EEEDBCC31AF1C0C300CAA407 /* AddCategoryVC.swift */,
 				1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */,
 				1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */,
-				1EDE09C81AF58014003AF18D /* ChangePeriodAndDateVC.swift */,
 				EEBB83F61AD599DC00BD14AA /* To Do */,
 				EE77CBF31ADB5116008FE01A /* SpendingVC.swift */,
 				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
@@ -269,7 +266,6 @@
 				EEBB83E91AD598A700BD14AA /* StatsVC.swift in Sources */,
 				EEBB83EF1AD5995000BD14AA /* CategoryVC.swift in Sources */,
 				EEBB83F91AD5B4F600BD14AA /* GlobalVars.swift in Sources */,
-				1EDE09C91AF58014003AF18D /* ChangePeriodAndDateVC.swift in Sources */,
 				EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */,
 				EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */,
 				EEBB83ED1AD5993900BD14AA /* OverviewVC.swift in Sources */,
