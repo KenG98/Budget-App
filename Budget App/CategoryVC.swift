@@ -39,7 +39,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.spendingsTable.dequeueReusableCellWithIdentifier("spendingCell") as! UITableViewCell
         cell.textLabel?.text = category.spendings[indexPath.row].name
-        cell.detailTextLabel?.text = "$\(category.spendings[indexPath.row].amount)"
+        cell.detailTextLabel?.text = "$\(category.spendings[indexPath.row].amount.moneyString)"
         return cell
     }
     

@@ -343,12 +343,6 @@
                                     <segue destination="ZWO-2t-hv8" kind="show" id="WWp-d8-bca"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total: $0000 / $0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-rR-9AL">
-                                <rect key="frame" x="219" y="484" width="162" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udn-6M-mg9">
                                 <rect key="frame" x="0.0" y="20" width="600" height="456.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -384,6 +378,12 @@
                                     <outlet property="delegate" destination="Pgr-w2-7H6" id="Vk5-O8-EML"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total: $0000 / $0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-rR-9AL">
+                                <rect key="frame" x="219" y="484" width="162" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -394,8 +394,18 @@
                             <constraint firstItem="udn-6M-mg9" firstAttribute="top" secondItem="YaT-7f-DOz" secondAttribute="bottom" id="Pu6-EB-aUD"/>
                             <constraint firstAttribute="centerX" secondItem="udn-6M-mg9" secondAttribute="centerX" id="XIJ-lR-oRf"/>
                             <constraint firstItem="OCN-qd-Dmt" firstAttribute="top" secondItem="JA0-yB-NSt" secondAttribute="bottom" constant="8" id="bWt-cf-t69"/>
+                            <constraint firstItem="sDi-rR-9AL" firstAttribute="top" secondItem="udn-6M-mg9" secondAttribute="bottom" constant="7.5" id="do9-H5-Vac"/>
+                            <constraint firstItem="JA0-yB-NSt" firstAttribute="top" secondItem="sDi-rR-9AL" secondAttribute="bottom" constant="8.5" id="h9J-yh-0wK"/>
+                            <constraint firstAttribute="centerX" secondItem="sDi-rR-9AL" secondAttribute="centerX" id="mzd-g2-5Uc"/>
                             <constraint firstAttribute="width" secondItem="udn-6M-mg9" secondAttribute="width" id="toV-xX-7rO"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Anh-Ad-5OO"/>
+                                <exclude reference="MQM-6e-aAY"/>
+                                <exclude reference="1X2-HY-CaA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Overview" id="PrO-Rj-oEc"/>
                     <connections>
