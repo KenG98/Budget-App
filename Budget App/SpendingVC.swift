@@ -32,4 +32,4 @@ class SpendingVC: UIViewController{
     @IBAction func backPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-}
+   }
