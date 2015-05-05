@@ -743,10 +743,10 @@
             </objects>
             <point key="canvasLocation" x="607" y="-50"/>
         </scene>
-        <!--SpendVC-->
+        <!--Edit SpendingVC-->
         <scene sceneID="vPc-uY-1Qq">
             <objects>
-                <viewController id="TWW-pj-dcS" customClass="SpendVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TWW-pj-dcS" customClass="EditSpendingVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VTf-2O-4eI"/>
                         <viewControllerLayoutGuide type="bottom" id="gsK-c7-8Hg"/>
@@ -761,7 +761,7 @@
                                     <navigationItem title="Edit Spending" id="vsX-8t-shx">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hxb-XA-T1c">
                                             <connections>
-                                                <action selector="backPressed:" destination="TWW-pj-dcS" id="pk7-kY-CRF"/>
+                                                <action selector="cancelPressed:" destination="TWW-pj-dcS" id="BOL-Pq-GxN"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -770,8 +770,8 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldj-CK-irp">
                                 <rect key="frame" x="0.0" y="64" width="600" height="162"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="TWW-pj-dcS" id="OT3-ak-MN2"/>
-                                    <outlet property="delegate" destination="TWW-pj-dcS" id="sZw-hq-JHl"/>
+                                    <outlet property="dataSource" destination="TWW-pj-dcS" id="mjx-Mk-TVe"/>
+                                    <outlet property="delegate" destination="TWW-pj-dcS" id="jSo-cp-H3b"/>
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c56-32-R7Z">
@@ -801,9 +801,6 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="spendPressed:" destination="TWW-pj-dcS" eventType="touchUpInside" id="B2E-ci-1ir"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-Pv-G7W">
                                 <rect key="frame" x="16" y="320" width="54" height="21"/>
@@ -869,10 +866,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="amountBox" destination="c56-32-R7Z" id="mMX-Ex-8mq"/>
-                        <outlet property="categoryPicker" destination="ldj-CK-irp" id="qah-7B-zDj"/>
-                        <outlet property="memoBox" destination="wHP-Rz-S1Y" id="p9a-FS-fiu"/>
-                        <outlet property="nameBox" destination="yAC-zR-tng" id="YUd-4s-K0R"/>
+                        <outlet property="amountBox" destination="c56-32-R7Z" id="tif-RN-t1K"/>
+                        <outlet property="categoryPicker" destination="ldj-CK-irp" id="DXN-23-aIk"/>
+                        <outlet property="memoBox" destination="wHP-Rz-S1Y" id="Ukh-Rz-HDG"/>
+                        <outlet property="nameBox" destination="yAC-zR-tng" id="fa9-GJ-Bar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cko-xQ-1kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
