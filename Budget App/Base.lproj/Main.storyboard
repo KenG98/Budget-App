@@ -796,11 +796,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rou-cS-1wp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rou-cS-1wp">
                                 <rect key="frame" x="284" y="513" width="34" height="30"/>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="TWW-pj-dcS" eventType="touchUpInside" id="qxR-Qs-pav"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-Pv-G7W">
                                 <rect key="frame" x="16" y="320" width="54" height="21"/>
@@ -808,12 +811,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHP-Rz-S1Y">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHP-Rz-S1Y">
                                 <rect key="frame" x="83" y="320" width="501" height="185"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwM-zR-fQP">
+                                <rect key="frame" x="421" y="513" width="44" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.1154835291" blue="0.078769605650000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deletePressed:" destination="TWW-pj-dcS" eventType="touchUpInside" id="DCb-q8-oYo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -832,6 +845,8 @@
                             <constraint firstItem="9mg-8Q-SJY" firstAttribute="width" secondItem="v7k-0I-Gkd" secondAttribute="width" id="MRt-XY-ja7"/>
                             <constraint firstItem="Anq-Pv-G7W" firstAttribute="leading" secondItem="v7k-0I-Gkd" secondAttribute="leadingMargin" id="T7b-7Z-0vK"/>
                             <constraint firstAttribute="centerX" secondItem="9mg-8Q-SJY" secondAttribute="centerX" id="U1s-pO-FLz"/>
+                            <constraint firstItem="mwM-zR-fQP" firstAttribute="leading" secondItem="rou-cS-1wp" secondAttribute="trailing" constant="103" id="UbM-c3-Y0y"/>
+                            <constraint firstItem="mwM-zR-fQP" firstAttribute="top" secondItem="wHP-Rz-S1Y" secondAttribute="bottom" constant="8" id="VzS-Kb-6sD"/>
                             <constraint firstItem="V1J-7b-LQZ" firstAttribute="top" secondItem="jun-dq-c0s" secondAttribute="bottom" constant="24" id="WwQ-pa-UW7"/>
                             <constraint firstItem="9mg-8Q-SJY" firstAttribute="top" secondItem="VTf-2O-4eI" secondAttribute="bottom" id="X8X-Np-3wS"/>
                             <constraint firstItem="rou-cS-1wp" firstAttribute="top" secondItem="yAC-zR-tng" secondAttribute="bottom" constant="5" id="ZV8-Ca-SZV"/>
@@ -853,15 +868,15 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="pDf-Gk-PwG"/>
                                 <exclude reference="4OG-59-zQt"/>
-                                <exclude reference="smW-5F-Ykg"/>
                                 <exclude reference="C26-6E-C5a"/>
+                                <exclude reference="pDf-Gk-PwG"/>
+                                <exclude reference="smW-5F-Ykg"/>
+                                <exclude reference="62I-bP-nHL"/>
+                                <exclude reference="vVL-tf-gJL"/>
+                                <exclude reference="zla-gW-OEN"/>
                                 <exclude reference="3dl-A0-VTv"/>
                                 <exclude reference="ZV8-Ca-SZV"/>
-                                <exclude reference="62I-bP-nHL"/>
-                                <exclude reference="zla-gW-OEN"/>
-                                <exclude reference="vVL-tf-gJL"/>
                             </mask>
                         </variation>
                     </view>

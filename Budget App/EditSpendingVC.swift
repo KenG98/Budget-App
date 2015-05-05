@@ -21,6 +21,13 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func savePressed(sender: UIButton) {
+        
+    }
+    @IBAction func deletePressed(sender: AnyObject) {
+        //While I don't love doing delete this way I don't know where else to put it or how else to do it
+    }
         func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
