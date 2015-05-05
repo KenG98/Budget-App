@@ -15,7 +15,7 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        totalLabel.text = "Total: $\(theBudget.totalSpent.moneyString) / $\(theBudget.totalBudget.moneyString)"
+        totalLabel.text = "Total: \(doubleToMoney(theBudget.totalSpent)) / \(doubleToMoney(theBudget.totalBudget))"
         var path = categoryTableView.indexPathForSelectedRow()
         if let deselectPath = path {
            categoryTableView.deselectRowAtIndexPath(deselectPath, animated: true)
@@ -30,7 +30,7 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.categoryTableView.dequeueReusableCellWithIdentifier("categorizedCell") as! UITableViewCell
         cell.textLabel?.text = theBudget.categories[indexPath.row].name
-        cell.detailTextLabel?.text = "$\(theBudget.categories[indexPath.row].moneySpent.moneyString) / $\(theBudget.categories[indexPath.row].budget.moneyString)"
+        cell.detailTextLabel?.text = "\(doubleToMoney(theBudget.categories[indexPath.row].moneySpent)) / \(doubleToMoney(theBudget.categories[indexPath.row].budget))"
         return cell
     }
     

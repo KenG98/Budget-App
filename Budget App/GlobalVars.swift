@@ -22,8 +22,14 @@ func loadBudget(){
     }
 }
 
-extension Double{
-    var moneyString: NSString {
-        return NSString(format: "%.2f", self)
+var moneyFormat = NSNumberFormatter()
+//moneyFormat.numberStyle = .CurrencyStyle
+//done in app delegate
+
+func doubleToMoney(numberToDo: Double) -> String{
+    if let x = moneyFormat.stringFromNumber(numberToDo){
+        return x
+    }else{
+        return "??"
     }
 }

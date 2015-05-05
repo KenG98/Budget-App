@@ -21,11 +21,11 @@ class SpendingVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.topItem?.title = spending.name
-        amountLabel.text = "$\(spending.amount.moneyString)"
+        amountLabel.text = doubleToMoney(spending.amount)
         let calendar = NSCalendar.currentCalendar()
         let date = spending.dateTime
         let components = calendar.components(.CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitYear, fromDate: date)
-        spendingDate.text = "\(components.month) - \(components.day) - \(components.year)"
+        spendingDate.text = "\(components.month)-\(components.day)-\(components.year)"
         spendingMemo.text = spending.memo
     }
     

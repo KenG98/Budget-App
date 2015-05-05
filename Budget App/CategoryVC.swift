@@ -39,7 +39,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             editButton.title = "Edit"
         }else{
             spendingsTable.setEditing(true, animated: true)
-            editButton.title = "Done"
+            editButton.title = "Save Changes"
         }
     }
     
@@ -68,7 +68,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.spendingsTable.dequeueReusableCellWithIdentifier("spendingCell") as! UITableViewCell
         cell.textLabel?.text = category.spendings[indexPath.row].name
-        cell.detailTextLabel?.text = "$\(category.spendings[indexPath.row].amount.moneyString)"
+        cell.detailTextLabel?.text = doubleToMoney(category.spendings[indexPath.row].amount)
         return cell
     }
     
