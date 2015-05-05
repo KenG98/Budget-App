@@ -54,6 +54,7 @@ class EntireBudget: NSObject, NSCoding{
         }
         return success
     }
+    
     func removeCategory(index: Int){
         if !categories.isEmpty {
             categories.removeAtIndex(index)

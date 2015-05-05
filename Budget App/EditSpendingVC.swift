@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 
 class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+    
     @IBOutlet weak var memoBox: UITextView!
     @IBOutlet weak var nameBox: UITextField!
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var categoryPicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,10 +27,8 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func savePressed(sender: UIButton) {
         
     }
-    @IBAction func deletePressed(sender: AnyObject) {
-        //While I don't love doing delete this way I don't know where else to put it or how else to do it
-    }
-        func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     

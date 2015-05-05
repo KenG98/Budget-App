@@ -12,6 +12,7 @@ import UIKit
 class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var spendingsTable: UITableView!
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     var category = ParticularCategory(name: "Loading...", budget: 0) //change this later
     
@@ -30,6 +31,34 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBAction func backPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func editPressed(sender: UIBarButtonItem) {
+        if spendingsTable.editing{
+            spendingsTable.setEditing(false, animated: true)
+            editButton.title = "Edit"
+        }else{
+            spendingsTable.setEditing(true, animated: true)
+            editButton.title = "Done"
+        }
+    }
+    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.Delete
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        category.removeSpending(indexPath.row)
+        spendingsTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        saveBudget()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

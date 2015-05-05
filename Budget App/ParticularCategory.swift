@@ -23,6 +23,10 @@ class ParticularCategory: NSObject, NSCoding{
         }
     }
     
+    func removeSpending(index: Int){
+        spendings.removeAtIndex(index)
+    }
+    
     func addSpending(name: String, memo: String, date: NSDate, amount: Double){
         spendings.append(ParticularSpending(name: name, memo: memo, dateTime: date, amount: amount))
     }
