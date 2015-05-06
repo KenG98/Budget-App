@@ -23,13 +23,18 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         amountBox.text = doubleToMoney(spending.amount)
         memoBox.text = spending.memo
         nameBox.text = spending.name
+        
     }
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func savePressed(sender: UIButton) {
-        
+        let memo = memoBox.text
+        let name = nameBox.text
+        let amount =  (amountBox.text as NSString).doubleValue
+        spending.update(name, memo: memo, amount: amount)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

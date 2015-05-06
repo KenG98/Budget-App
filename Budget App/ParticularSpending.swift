@@ -20,6 +20,11 @@ class ParticularSpending: NSObject, NSCoding {
         self.memo = memo
         self.name = name
     }
+    func update(name: String, memo: String, amount: Double){
+        self.amount = amount
+        self.memo = memo
+        self.name = name
+    }
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(name, forKey: "name")
