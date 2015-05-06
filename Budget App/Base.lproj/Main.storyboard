@@ -251,7 +251,11 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Change Period" id="5gj-Ml-i3L">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wkP-1P-5FQ"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wkP-1P-5FQ">
+                                            <connections>
+                                                <action selector="cancelPressed:" destination="iQp-gS-IgO" id="psj-Dm-oiE"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

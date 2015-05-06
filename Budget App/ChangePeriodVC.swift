@@ -11,6 +11,9 @@ import UIKit
 
 class ChangePeriodVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
+    @IBAction func cancelPressed(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBOutlet weak var periodPicker: UIPickerView!
     
     var options = ["Daily", "Weekly", "Monthly", "Yearly"]
