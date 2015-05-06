@@ -16,9 +16,13 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var amountBox: UITextField!
     @IBOutlet weak var categoryPicker: UIPickerView!
     
+    var spending = ParticularSpending(name: "Loading...", memo: "Loading...", dateTime: NSDate(), amount: 0.0) //change this later
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        amountBox.text = doubleToMoney(spending.amount)
+        memoBox.text = spending.memo
+        nameBox.text = spending.name
     }
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)

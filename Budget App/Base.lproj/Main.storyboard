@@ -205,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H55-WL-q5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2205" y="2437"/>
+            <point key="canvasLocation" x="2196" y="2429"/>
         </scene>
         <!--Add CategoryVC-->
         <scene sceneID="Nkw-ZG-05I">
@@ -680,7 +680,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TWW-pj-dcS" kind="show" id="44v-o6-b6F"/>
+                                    <segue destination="TWW-pj-dcS" kind="show" identifier="EditSpendingPressed" id="44v-o6-b6F"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyW-di-TdC">

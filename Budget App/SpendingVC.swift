@@ -32,4 +32,11 @@ class SpendingVC: UIViewController{
     @IBAction func backPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "EditSpendingPressed"{
+            if let destination = segue.destinationViewController as? EditSpendingVC{
+                destination.spending = self.spending
+            }
+        }
+    }
    }
