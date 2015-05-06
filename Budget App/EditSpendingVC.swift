@@ -20,7 +20,7 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        amountBox.text = doubleToMoney(spending.amount)
+        amountBox.text = "\(spending.amount)"
         memoBox.text = spending.memo
         nameBox.text = spending.name
         
@@ -35,6 +35,7 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let amount =  (amountBox.text as NSString).doubleValue
         spending.update(name, memo: memo, amount: amount)
         dismissViewControllerAnimated(true, completion: nil)
+        saveBudget()
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

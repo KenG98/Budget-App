@@ -18,6 +18,16 @@ class SpendingVC: UIViewController{
     
     var spending = ParticularSpending(name: "Loading...", memo: "Loading...", dateTime: NSDate(), amount: 0.0) //change this later
 
+    override func viewWillAppear(animated: Bool) {
+        navBar.topItem?.title = spending.name
+        amountLabel.text = doubleToMoney(spending.amount)
+//        let calendar = NSCalendar.currentCalendar()
+//        let date = spending.dateTime
+//        let components = calendar.components(.CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitYear, fromDate: date)
+//        spendingDate.text = "\(components.month)-\(components.day)-\(components.year)"
+        spendingMemo.text = spending.memo
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.topItem?.title = spending.name

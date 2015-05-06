@@ -26,11 +26,20 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if let deselectPath = path {
             spendingsTable.deselectRowAtIndexPath(deselectPath, animated: true)
         }
-
+        
+        spendingsTable.reloadData()
     }
     
     @IBAction func backPressed(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        if spendingsTable.editing{
+            let alert = UIAlertView()
+            alert.title = "Wait!"
+            alert.message = "Save your changes before going back."
+            alert.addButtonWithTitle("Okay")
+            alert.show()
+        }else{
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     @IBAction func editPressed(sender: UIBarButtonItem) {
@@ -44,7 +53,11 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        return UITableViewCellEditingStyle.Delete
+        if spendingsTable.editing{
+            return UITableViewCellEditingStyle.Delete
+        }else{
+            return UITableViewCellEditingStyle.None
+        }
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

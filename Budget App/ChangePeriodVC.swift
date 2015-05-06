@@ -11,12 +11,21 @@ import UIKit
 
 class ChangePeriodVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var periodPicker: UIPickerView!
+    
+    var options = ["1 Week", "1 Month", "2 Months", "3 Months", "4 Months", "6 Months", "1 Year"]
+    
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    @IBOutlet weak var periodPicker: UIPickerView!
     
-    var options = ["Daily", "Weekly", "Monthly", "Yearly"]
+    @IBAction func savePressed(sender: UIButton) {
+        theBudget.periodStart = datePicker.date
+        
+        // do length here
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }

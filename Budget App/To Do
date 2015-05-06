@@ -7,3 +7,6 @@
 -I implemented NSCoder not safely. Have to check for if objects don't exist
 
 -Implement "didRecieveMemoryWarning" by saving all the data and getting rid of not needed assets
+
+-make it work with other currencies (not just usd)
+

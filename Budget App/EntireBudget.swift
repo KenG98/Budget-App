@@ -10,7 +10,7 @@ import Foundation
 
 class EntireBudget: NSObject, NSCoding{
     var periodStart: NSDate
-    var periodLength: NSTimeInterval
+    var periodLength: NSTimeInterval // Maybe NSDateComponents is more appropriate here
     var periodEnd: NSDate{
         get{
             return periodStart.dateByAddingTimeInterval(periodLength)
