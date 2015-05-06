@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E4F166C1AF84769004CE364 /* EditSpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */; };
+		1E4F166E1AFA5E3C004CE364 /* ChangePeriodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */; };
 		1EDE09C41AF40425003AF18D /* RemoveCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */; };
 		1EDE09C71AF57A61003AF18D /* HowToUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */; };
 		EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77CBF31ADB5116008FE01A /* SpendingVC.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSpendingVC.swift; sourceTree = "<group>"; };
+		1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePeriodVC.swift; sourceTree = "<group>"; };
 		1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveCategoryVC.swift; sourceTree = "<group>"; };
 		1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseVC.swift; sourceTree = "<group>"; };
 		EE77CBF31ADB5116008FE01A /* SpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingVC.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				EEEDBCC31AF1C0C300CAA407 /* AddCategoryVC.swift */,
 				1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */,
 				1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */,
+				1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */,
 				1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */,
 				EEBB83F61AD599DC00BD14AA /* To Do */,
 				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
@@ -268,6 +271,7 @@
 				1EDE09C41AF40425003AF18D /* RemoveCategoryVC.swift in Sources */,
 				EEEDBCC41AF1C0C300CAA407 /* AddCategoryVC.swift in Sources */,
 				EEBB83E91AD598A700BD14AA /* StatsVC.swift in Sources */,
+				1E4F166E1AFA5E3C004CE364 /* ChangePeriodVC.swift in Sources */,
 				EEBB83EF1AD5995000BD14AA /* CategoryVC.swift in Sources */,
 				EEBB83F91AD5B4F600BD14AA /* GlobalVars.swift in Sources */,
 				EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */,

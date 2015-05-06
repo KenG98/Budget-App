@@ -110,6 +110,9 @@
                                 <state key="normal" title="Change Renewing Period and Date">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iQp-gS-IgO" kind="show" id="f7l-Qk-seQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d62-aJ-LGI">
                                 <rect key="frame" x="16" y="180" width="140" height="30"/>
@@ -206,6 +209,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H55-WL-q5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2196" y="2429"/>
+        </scene>
+        <!--Change PeriodVC-->
+        <scene sceneID="rZk-Pp-qeU">
+            <objects>
+                <viewController id="iQp-gS-IgO" customClass="ChangePeriodVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jmE-kp-N0r"/>
+                        <viewControllerLayoutGuide type="bottom" id="yOd-Bt-39G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iln-hl-XmG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JoX-X1-5GP">
+                                <rect key="frame" x="-2" y="326" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iQp-gS-IgO" id="8S5-7W-fTV"/>
+                                    <outlet property="delegate" destination="iQp-gS-IgO" id="Y1a-lx-rjN"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Start Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCL-hO-rZq">
+                                <rect key="frame" x="259" y="76" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o3-Q7-O6F">
+                                <rect key="frame" x="273" y="297" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scP-3A-TWP">
+                                <rect key="frame" x="281" y="496" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-dq-jth">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Change Period" id="5gj-Ml-i3L">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wkP-1P-5FQ"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="23W-Ep-AAv">
+                                <rect key="frame" x="0.0" y="105" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="452616391.22813302">
+                                    <!--2015-05-06 14:46:31 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="23W-Ep-AAv" secondAttribute="centerX" id="7zD-06-ZqZ"/>
+                            <constraint firstItem="HCL-hO-rZq" firstAttribute="top" secondItem="fJL-dq-jth" secondAttribute="bottom" constant="12" id="Ahj-Gr-Hfy"/>
+                            <constraint firstAttribute="centerX" secondItem="scP-3A-TWP" secondAttribute="centerX" constant="2" id="DjD-V8-fzS"/>
+                            <constraint firstAttribute="centerX" secondItem="JoX-X1-5GP" secondAttribute="centerX" constant="2" id="HKD-Fm-E7H"/>
+                            <constraint firstItem="yOd-Bt-39G" firstAttribute="top" secondItem="scP-3A-TWP" secondAttribute="bottom" constant="25" id="IxM-ND-TdC"/>
+                            <constraint firstAttribute="centerX" secondItem="HCL-hO-rZq" secondAttribute="centerX" id="PaA-cQ-h8k"/>
+                            <constraint firstAttribute="centerX" secondItem="fJL-dq-jth" secondAttribute="centerX" id="Yeq-qa-eDy"/>
+                            <constraint firstAttribute="centerY" secondItem="23W-Ep-AAv" secondAttribute="centerY" constant="114" id="rcX-G3-hsf"/>
+                            <constraint firstAttribute="centerY" secondItem="7o3-Q7-O6F" secondAttribute="centerY" constant="-7.5" id="tec-iG-ljF"/>
+                            <constraint firstAttribute="centerX" secondItem="7o3-Q7-O6F" secondAttribute="centerX" constant="2" id="wBq-6M-ELE"/>
+                            <constraint firstAttribute="centerY" secondItem="scP-3A-TWP" secondAttribute="centerY" constant="-211" id="yS1-8L-Fd0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="periodPicker" destination="JoX-X1-5GP" id="bNL-Sv-8bb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbV-ct-ViD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205" y="3121"/>
         </scene>
         <!--Add CategoryVC-->
         <scene sceneID="Nkw-ZG-05I">
