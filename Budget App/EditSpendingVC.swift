@@ -18,18 +18,22 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var spending = ParticularSpending(name: "Loading...", memo: "Loading...", dateTime: NSDate(), amount: 0.0) //change this later
     var category = ParticularCategory(name: "Loading...", budget: 0)
+    
+    var categoryIndex = 0
+    var spendingIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         amountBox.text = "\(spending.amount)"
         memoBox.text = spending.memo
         nameBox.text = spending.name
-        var index = 0
+        
         for var i = 0; i < theBudget.categories.count; i++ {
             if theBudget.categories[i] === category {
-                index = i
+                categoryIndex = i
             }
         }
-        categoryPicker.selectRow(index, inComponent: 0, animated: true)
+        //for var i = 0; i < theBudget.categories[i].
+        categoryPicker.selectRow(categoryIndex, inComponent: 0, animated: true)
     }
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -41,7 +45,11 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let amount =  (amountBox.text as NSString).doubleValue
         spending.update(name, memo: memo, amount: amount)
         dismissViewControllerAnimated(true, completion: nil)
+        theBudget.categories[categoryIndex].removeSpending2(spending)
+        let index = categoryPicker.selectedRowInComponent(0)
+        theBudget.categories[index].addSpending(spending)
         saveBudget()
+        
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
