@@ -17,7 +17,7 @@ class SpendingVC: UIViewController{
     @IBOutlet weak var spendingDate: UILabel!
     
     var spending = ParticularSpending(name: "Loading...", memo: "Loading...", dateTime: NSDate(), amount: 0.0) //change this later
-
+    var category = ParticularCategory(name: "Loading...", budget: 0)
     override func viewWillAppear(animated: Bool) {
         navBar.topItem?.title = spending.name
         amountLabel.text = doubleToMoney(spending.amount)
@@ -46,6 +46,7 @@ class SpendingVC: UIViewController{
         if segue.identifier == "EditSpendingPressed"{
             if let destination = segue.destinationViewController as? EditSpendingVC{
                 destination.spending = self.spending
+                destination.category = self.category
             }
         }
     }

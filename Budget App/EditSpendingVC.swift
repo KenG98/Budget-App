@@ -17,13 +17,19 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var categoryPicker: UIPickerView!
     
     var spending = ParticularSpending(name: "Loading...", memo: "Loading...", dateTime: NSDate(), amount: 0.0) //change this later
-    
+    var category = ParticularCategory(name: "Loading...", budget: 0)
     override func viewDidLoad() {
         super.viewDidLoad()
         amountBox.text = "\(spending.amount)"
         memoBox.text = spending.memo
         nameBox.text = spending.name
-        
+        var index = 0
+        for var i = 0; i < theBudget.categories.count; i++ {
+            if theBudget.categories[i] === category {
+                index = i
+            }
+        }
+        categoryPicker.selectRow(index, inComponent: 0, animated: true)
     }
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)

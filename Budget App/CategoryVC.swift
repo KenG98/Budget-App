@@ -90,6 +90,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             if let destination = segue.destinationViewController as? SpendingVC{
                 if let index = spendingsTable.indexPathForSelectedRow()?.row{
                     destination.spending = category.spendings[index]
+                    destination.category = self.category
                 }
             }
         }
