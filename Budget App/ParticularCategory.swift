@@ -29,7 +29,7 @@ class ParticularCategory: NSObject, NSCoding{
     
     func removeSpending2(spending: ParticularSpending) {
         for var i = 0; i < spendings.count; i++ {
-            if spending === spendings[i]{
+            if spending == spendings[i]{
                 removeSpending(i)
             }
         }

@@ -10,3 +10,10 @@
 
 -make it work with other currencies (not just usd)
 
+-settings icon http://www.flaticon.com/free-icon/settings-work-tool_70367
+-list icon http://www.flaticon.com/free-icon/office-list_64248
+-graph icon http://www.flaticon.com/free-icon/ascending-line-graphic-of-business-stats_60504
+
+-"User defined runtime attributes" to fix tab bar image for selected image (apple's bug... this is just a workaround meanwhile. change it later). We still get an error when the app starts about imvalid asset name supplied. This is a bug on apple's part and i added a workaround. We'll need to change it when its fixed. http://webcache.googleusercontent.com/search?q=cache:6HsdUnPyRtsJ:stackoverflow.com/questions/25612842/xcode-6-beta-6-cuicatalog-invalid-asset-name-supplied-null-or-invalid-scale+CUICatalog:+Invalid+asset+name+supplied:+(null)&cd=2&hl=en&ct=clnk&gl=us
+
+-
