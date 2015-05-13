@@ -19,11 +19,34 @@ class ChangePeriodVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    func makePeriod(period: String) -> NSTimeInterval {
+        switch period {
+        case "1 Week" :
+            return 604800
+        case "1 Month" :
+            return 2629740
+        case "2 Months" :
+            return 5259490
+        case "3 Months" :
+            return 7889230
+        case "4 Months" :
+            return 1051900
+        case "6 Months" :
+            return 15778500
+        case "1 Year" :
+            return 31556900
+        default :
+            return 0
+            
+        }
+        
+    }
     
     @IBAction func savePressed(sender: UIButton) {
         theBudget.periodStart = datePicker.date
+        theBudget.periodLength = makePeriod(options[periodPicker.selectedRowInComponent(0)])
+        //println(theBudget.periodLength)
         
-        // do length here
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
