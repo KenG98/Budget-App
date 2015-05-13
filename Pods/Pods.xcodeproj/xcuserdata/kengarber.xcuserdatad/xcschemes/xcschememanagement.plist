@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Budget App-JBChartView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Budget App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Budget AppTests-JBChartView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Budget AppTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-JBChartView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>21700E069A21DF890EA9FED4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28A9CF899142093A6278B4F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DB70D2DB49F9EF09E458680</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34138A71E13CB3025CCB6920</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>777F1093D6CF6DD348F2C141</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DB841FA63CE60D3FA802EA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

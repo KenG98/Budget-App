@@ -15,10 +15,21 @@ class AddCategoryVC: UIViewController {
     @IBOutlet weak var amountBox: UITextField!
     
     @IBAction func addCategoryPressed(sender: UIButton) {
-        theBudget.addCategory(nameBox.text, budget: (amountBox.text as NSString).doubleValue)
+        var didWork = theBudget.addCategory(nameBox.text, budget: (amountBox.text as NSString).doubleValue)
         //IMPORTANT. Do error handling here. Check for proper input. Super unsafe as it is now.
-        dismissViewControllerAnimated(true, completion: nil)
-        saveBudget()
+        
+        if didWork{
+            dismissViewControllerAnimated(true, completion: nil)
+            saveBudget()
+        }
+        else{
+            let alert = UIAlertView()
+            alert.title = "Sorry"
+            alert.message = "A category with this name exists. Please choose a different name."
+            alert.addButtonWithTitle("Okay")
+            alert.show()
+        }
+        
     }
     
     @IBAction func cancelPressed(sender: AnyObject) {

@@ -27,12 +27,12 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         memoBox.text = spending.memo
         nameBox.text = spending.name
         
+        //need to change this a bit
         for var i = 0; i < theBudget.categories.count; i++ {
             if theBudget.categories[i] === category {
                 categoryIndex = i
             }
         }
-        //for var i = 0; i < theBudget.categories[i].
         categoryPicker.selectRow(categoryIndex, inComponent: 0, animated: true)
     }
     @IBAction func cancelPressed(sender: UIBarButtonItem) {

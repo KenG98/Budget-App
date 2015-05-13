@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+class SettingsVC: UIViewController{
+    
+    @IBAction func testPressed(sender: AnyObject) {
+        var spendings = theBudget.getAllSpendingsSorted()
+        for spending in spendings{
+            println("\(spending.dateTime): \(spending.name)")
+        }
+    }
+}

@@ -27,8 +27,11 @@ class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         return theBudget.categories[row].name
     }
     @IBAction func deleteClicked(sender: UIButton) {
+        
+        // IMPORTANT- ask the user if they're sure. tell them everything will be deleted.
+        
         theBudget.removeCategory(categoryPicker.selectedRowInComponent(0))
-        dismissViewControllerAnimated(true, completion: nil) //Only does this for now because I can't get the cancel button to show up
+        dismissViewControllerAnimated(true, completion: nil)
         saveBudget()
     }
 }

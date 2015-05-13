@@ -69,7 +69,7 @@
         <!--Settings-->
         <scene sceneID="O6b-vo-wa8">
             <objects>
-                <viewController id="IqY-Sw-5IK" sceneMemberID="viewController">
+                <viewController id="IqY-Sw-5IK" customClass="SettingsVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HPn-YB-l2h"/>
                         <viewControllerLayoutGuide type="bottom" id="PR7-QV-dQk"/>
@@ -119,6 +119,21 @@
                                 <state key="normal" title="View Budget History">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGz-GL-4kA">
+                                <rect key="frame" x="16" y="218" width="93" height="30"/>
+                                <state key="normal" title="Remove Data">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FH-8E-f7n">
+                                <rect key="frame" x="16" y="256" width="260" height="30"/>
+                                <state key="normal" title="Test Button (go ahead and test with it)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testPressed:" destination="IqY-Sw-5IK" eventType="touchUpInside" id="6Ol-jz-JsW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,8 +248,8 @@
                                     <outlet property="delegate" destination="iQp-gS-IgO" id="Y1a-lx-rjN"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCL-hO-rZq">
-                                <rect key="frame" x="259" y="76" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCL-hO-rZq">
+                                <rect key="frame" x="261" y="76" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -266,22 +281,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="23W-Ep-AAv">
-                                <rect key="frame" x="0.0" y="105" width="600" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="452616391.22813302">
-                                    <!--2015-05-06 14:46:31 +0000-->
-                                </date>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- --- ---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVa-Mh-1Xe">
                                 <rect key="frame" x="265" y="285" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="23W-Ep-AAv">
+                                <rect key="frame" x="0.0" y="105" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="452616391.22813302">
+                                    <!--2015-05-06 14:46:31 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HCL-hO-rZq" firstAttribute="top" secondItem="jmE-kp-N0r" secondAttribute="bottom" constant="56" id="0iz-vo-GBL"/>
+                            <constraint firstItem="23W-Ep-AAv" firstAttribute="leading" secondItem="Iln-hl-XmG" secondAttribute="leadingMargin" constant="-16" id="3hR-08-H8Q"/>
                             <constraint firstItem="23W-Ep-AAv" firstAttribute="top" secondItem="HCL-hO-rZq" secondAttribute="bottom" constant="8" id="3lY-yE-ull"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NVa-Mh-1Xe" secondAttribute="trailing" constant="-16" id="3u1-0U-fSF"/>
                             <constraint firstItem="scP-3A-TWP" firstAttribute="top" secondItem="JoX-X1-5GP" secondAttribute="bottom" constant="8" id="4vS-hz-TfK"/>
@@ -300,6 +316,7 @@
                             <constraint firstItem="yOd-Bt-39G" firstAttribute="top" secondItem="scP-3A-TWP" secondAttribute="bottom" constant="8" id="hMu-cy-fKs"/>
                             <constraint firstItem="7o3-Q7-O6F" firstAttribute="top" secondItem="NVa-Mh-1Xe" secondAttribute="bottom" constant="8" id="kuU-VS-pMo"/>
                             <constraint firstItem="JoX-X1-5GP" firstAttribute="leading" secondItem="Iln-hl-XmG" secondAttribute="leadingMargin" constant="-16" id="lZD-xH-Pbv"/>
+                            <constraint firstItem="23W-Ep-AAv" firstAttribute="top" secondItem="HCL-hO-rZq" secondAttribute="bottom" constant="8" id="o2K-dG-zZ3"/>
                             <constraint firstItem="fJL-dq-jth" firstAttribute="leading" secondItem="Iln-hl-XmG" secondAttribute="leadingMargin" constant="-16" id="o4x-zB-HfQ"/>
                             <constraint firstAttribute="centerY" secondItem="23W-Ep-AAv" secondAttribute="centerY" constant="114" id="rcX-G3-hsf"/>
                             <constraint firstAttribute="centerX" secondItem="NVa-Mh-1Xe" secondAttribute="centerX" id="s5o-5J-TXp"/>
@@ -308,10 +325,13 @@
                             <constraint firstAttribute="centerX" secondItem="7o3-Q7-O6F" secondAttribute="centerX" constant="2" id="wBq-6M-ELE"/>
                             <constraint firstItem="7o3-Q7-O6F" firstAttribute="top" secondItem="NVa-Mh-1Xe" secondAttribute="bottom" constant="6" id="wjO-HQ-ZDB"/>
                             <constraint firstAttribute="centerY" secondItem="scP-3A-TWP" secondAttribute="centerY" constant="-211" id="yS1-8L-Fd0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="23W-Ep-AAv" secondAttribute="trailing" constant="-16" id="z1e-PU-PrC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Yeq-qa-eDy"/>
+                                <exclude reference="3lY-yE-ull"/>
+                                <exclude reference="7zD-06-ZqZ"/>
                                 <exclude reference="rcX-G3-hsf"/>
                                 <exclude reference="Ahj-Gr-Hfy"/>
                                 <exclude reference="HKD-Fm-E7H"/>
@@ -320,8 +340,8 @@
                                 <exclude reference="tec-iG-ljF"/>
                                 <exclude reference="wBq-6M-ELE"/>
                                 <exclude reference="wjO-HQ-ZDB"/>
-                                <exclude reference="yS1-8L-Fd0"/>
                                 <exclude reference="IxM-ND-TdC"/>
+                                <exclude reference="yS1-8L-Fd0"/>
                             </mask>
                         </variation>
                     </view>

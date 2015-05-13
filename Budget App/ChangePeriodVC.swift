@@ -45,8 +45,8 @@ class ChangePeriodVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func savePressed(sender: UIButton) {
         theBudget.periodStart = datePicker.date
         theBudget.periodLength = makePeriod(options[periodPicker.selectedRowInComponent(0)])
-        //println(theBudget.periodLength)
-        
+        // do some checking here to make sure input is valid
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
