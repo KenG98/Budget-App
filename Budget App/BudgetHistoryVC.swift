@@ -27,7 +27,7 @@ class BudgetHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showOldSpendings"{
-            if let destination = segue.destinationViewController as? SpendingVC{
+            if let destination = segue.destinationViewController as? ViewHistoricSpendingVC{
                 if let index = budgetTable.indexPathForSelectedRow()?.row{
                     destination.spending = theBudget.oldSpendings[index]
                 }
