@@ -25,4 +25,14 @@ class BudgetHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.detailTextLabel?.text = doubleToMoney(theBudget.oldSpendings[indexPath.row].amount)
         return cell
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showOldSpendings"{
+            if let destination = segue.destinationViewController as? SpendingVC{
+                if let index = budgetTable.indexPathForSelectedRow()?.row{
+                    destination.spending = theBudget.oldSpendings[index]
+                }
+            }
+        }
+    }
+    
 }

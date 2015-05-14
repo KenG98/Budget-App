@@ -187,6 +187,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="YBC-fn-7V7" kind="show" identifier="showOldSpendings" id="i2P-58-TXT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1125,6 +1128,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cko-xQ-1kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3623" y="-1093"/>
+        </scene>
+        <!--SpendingVC-->
+        <scene sceneID="RgV-6o-hue">
+            <objects>
+                <viewController id="YBC-fn-7V7" customClass="SpendingVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KhX-3v-THG"/>
+                        <viewControllerLayoutGuide type="bottom" id="550-vz-Qf3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G3d-8q-QwV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qw4-EY-aeJ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Spending Name" id="kbc-NI-K6b">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="HZL-ih-8cJ">
+                                            <connections>
+                                                <action selector="backPressed:" destination="YBC-fn-7V7" id="gVy-ea-WNN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqa-C3-riL">
+                                <rect key="frame" x="16" y="130" width="568" height="375"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4L-zt-I0d">
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyT-La-gld">
+                                <rect key="frame" x="16" y="101" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qw4-EY-aeJ" firstAttribute="top" secondItem="KhX-3v-THG" secondAttribute="bottom" id="3E8-Mp-jul"/>
+                            <constraint firstItem="s4L-zt-I0d" firstAttribute="top" secondItem="Qw4-EY-aeJ" secondAttribute="bottom" id="Aqf-nL-MvX"/>
+                            <constraint firstItem="s4L-zt-I0d" firstAttribute="trailing" secondItem="G3d-8q-QwV" secondAttribute="trailingMargin" id="Ch2-kW-Wnk"/>
+                            <constraint firstItem="Nqa-C3-riL" firstAttribute="top" secondItem="LyT-La-gld" secondAttribute="bottom" constant="8" id="N4U-jX-C4h"/>
+                            <constraint firstItem="LyT-La-gld" firstAttribute="trailing" secondItem="G3d-8q-QwV" secondAttribute="trailingMargin" id="YPn-jV-1Dn"/>
+                            <constraint firstAttribute="centerX" secondItem="Qw4-EY-aeJ" secondAttribute="centerX" id="YQq-ta-86b"/>
+                            <constraint firstItem="LyT-La-gld" firstAttribute="leading" secondItem="G3d-8q-QwV" secondAttribute="leadingMargin" id="Yjb-hO-eSY"/>
+                            <constraint firstItem="s4L-zt-I0d" firstAttribute="leading" secondItem="G3d-8q-QwV" secondAttribute="leadingMargin" id="bRg-2o-Nux"/>
+                            <constraint firstItem="Nqa-C3-riL" firstAttribute="leading" secondItem="G3d-8q-QwV" secondAttribute="leadingMargin" id="bW1-fA-Ycs"/>
+                            <constraint firstAttribute="width" secondItem="Qw4-EY-aeJ" secondAttribute="width" id="gVw-bd-lxS"/>
+                            <constraint firstItem="Nqa-C3-riL" firstAttribute="top" secondItem="s4L-zt-I0d" secondAttribute="bottom" constant="8" id="mAN-sx-0Zj"/>
+                            <constraint firstItem="Nqa-C3-riL" firstAttribute="trailing" secondItem="G3d-8q-QwV" secondAttribute="trailingMargin" id="pg5-GN-tek"/>
+                            <constraint firstItem="LyT-La-gld" firstAttribute="top" secondItem="s4L-zt-I0d" secondAttribute="bottom" constant="8" id="qxA-a2-whL"/>
+                            <constraint firstItem="s4L-zt-I0d" firstAttribute="top" secondItem="Qw4-EY-aeJ" secondAttribute="bottom" constant="8" id="wpe-be-N0I"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Aqf-nL-MvX"/>
+                                <exclude reference="mAN-sx-0Zj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="s4L-zt-I0d" id="tl7-4X-b1N"/>
+                        <outlet property="navBar" destination="Qw4-EY-aeJ" id="fKi-66-wPy"/>
+                        <outlet property="spendingDate" destination="LyT-La-gld" id="vGE-3R-hpb"/>
+                        <outlet property="spendingMemo" destination="Nqa-C3-riL" id="NmV-KQ-ReJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rca-cO-rxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905" y="3779"/>
         </scene>
     </scenes>
     <resources>
