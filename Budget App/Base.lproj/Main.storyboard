@@ -387,8 +387,8 @@
                                 <exclude reference="tec-iG-ljF"/>
                                 <exclude reference="wBq-6M-ELE"/>
                                 <exclude reference="wjO-HQ-ZDB"/>
-                                <exclude reference="IxM-ND-TdC"/>
                                 <exclude reference="yS1-8L-Fd0"/>
+                                <exclude reference="IxM-ND-TdC"/>
                             </mask>
                         </variation>
                     </view>
@@ -492,7 +492,7 @@
         <!--Stats-->
         <scene sceneID="MEb-tE-70L">
             <objects>
-                <viewController id="UNN-q0-dHw" sceneMemberID="viewController">
+                <viewController id="UNN-q0-dHw" customClass="StatsVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mbw-0q-X9w"/>
                         <viewControllerLayoutGuide type="bottom" id="0uI-KO-9qt"/>

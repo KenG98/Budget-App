@@ -52,6 +52,7 @@
 		1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseVC.swift; sourceTree = "<group>"; };
 		47B542222FED88E8894B7C65 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE99BA8833309ACA41CB4E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EE29123D1B041CF1004CFC31 /* JBChartView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JBChartView-Bridging-Header.h"; path = "../JBChartView-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE77CBF31ADB5116008FE01A /* SpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingVC.swift; sourceTree = "<group>"; };
 		EE8C68561AB0A24800641A7F /* Budget App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C685A1AB0A24800641A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,11 +154,8 @@
 				1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */,
 				1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */,
 				1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */,
-<<<<<<< Updated upstream
 				EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */,
-=======
 				1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */,
->>>>>>> Stashed changes
 				EEBB83F61AD599DC00BD14AA /* To Do */,
 				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
 				EEBB83E41AD5989000BD14AA /* MainVC.swift */,
@@ -171,6 +169,7 @@
 		EE8C68591AB0A24800641A7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE29123D1B041CF1004CFC31 /* JBChartView-Bridging-Header.h */,
 				EE8C685A1AB0A24800641A7F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -476,6 +475,7 @@
 				INFOPLIST_FILE = "Budget App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JBChartView-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -487,6 +487,7 @@
 				INFOPLIST_FILE = "Budget App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JBChartView-Bridging-Header.h";
 			};
 			name = Release;
 		};
