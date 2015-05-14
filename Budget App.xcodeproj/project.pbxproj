@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E4F166C1AF84769004CE364 /* EditSpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */; };
 		1E4F166E1AFA5E3C004CE364 /* ChangePeriodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */; };
+		1EC3363E1B03B37A00A0B1A5 /* BudgetHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */; };
 		1EDE09C41AF40425003AF18D /* RemoveCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */; };
 		1EDE09C71AF57A61003AF18D /* HowToUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */; };
 		EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77CBF31ADB5116008FE01A /* SpendingVC.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSpendingVC.swift; sourceTree = "<group>"; };
 		1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePeriodVC.swift; sourceTree = "<group>"; };
+		1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetHistoryVC.swift; sourceTree = "<group>"; };
 		1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveCategoryVC.swift; sourceTree = "<group>"; };
 		1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseVC.swift; sourceTree = "<group>"; };
 		47B542222FED88E8894B7C65 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +153,11 @@
 				1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */,
 				1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */,
 				1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */,
+<<<<<<< Updated upstream
 				EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */,
+=======
+				1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */,
+>>>>>>> Stashed changes
 				EEBB83F61AD599DC00BD14AA /* To Do */,
 				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
 				EEBB83E41AD5989000BD14AA /* MainVC.swift */,
@@ -334,6 +340,7 @@
 				EEBB83EF1AD5995000BD14AA /* CategoryVC.swift in Sources */,
 				EEBB83F91AD5B4F600BD14AA /* GlobalVars.swift in Sources */,
 				EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */,
+				1EC3363E1B03B37A00A0B1A5 /* BudgetHistoryVC.swift in Sources */,
 				EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */,
 				EEBB83ED1AD5993900BD14AA /* OverviewVC.swift in Sources */,
 				EEBB83EB1AD598B600BD14AA /* SpendVC.swift in Sources */,

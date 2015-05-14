@@ -119,6 +119,9 @@
                                 <state key="normal" title="View Budget History">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="r8D-dB-Hhl" kind="show" id="Sv7-1T-ciD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGz-GL-4kA">
                                 <rect key="frame" x="16" y="218" width="93" height="30"/>
@@ -147,6 +150,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuC-5g-Wn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1427" y="1006"/>
+        </scene>
+        <!--Budget HistoryVC-->
+        <scene sceneID="tKf-xj-jOS">
+            <objects>
+                <viewController id="r8D-dB-Hhl" customClass="BudgetHistoryVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eaB-gt-JXV"/>
+                        <viewControllerLayoutGuide type="bottom" id="gav-3b-fjH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pqE-uI-Oj3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-7I-e0S">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5RU-nY-u3b">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5RU-nY-u3b" id="kfe-tj-cL3">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-6O-m78">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="SO1-3b-Dee">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="zbq-hq-5fB"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="budgetTable" destination="ahd-7I-e0S" id="edU-FN-VtG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AjB-9a-5RY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205" y="3779"/>
         </scene>
         <!--Remove CategoryVC-->
         <scene sceneID="GCK-BW-Gt0">

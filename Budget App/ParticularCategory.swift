@@ -34,7 +34,9 @@ class ParticularCategory: NSObject, NSCoding{
             }
         }
     }
-
+    func getSpendingSize() -> Int{
+        return spendings.count
+    }
     func addSpending(name: String, memo: String, date: NSDate, amount: Double){
         spendings.append(ParticularSpending(name: name, memo: memo, dateTime: date, amount: amount))
     }
