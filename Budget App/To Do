@@ -16,4 +16,7 @@
 
 -"User defined runtime attributes" to fix tab bar image for selected image (apple's bug... this is just a workaround meanwhile. change it later). We still get an error when the app starts about imvalid asset name supplied. This is a bug on apple's part and i added a workaround. We'll need to change it when its fixed. http://webcache.googleusercontent.com/search?q=cache:6HsdUnPyRtsJ:stackoverflow.com/questions/25612842/xcode-6-beta-6-cuicatalog-invalid-asset-name-supplied-null-or-invalid-scale+CUICatalog:+Invalid+asset+name+supplied:+(null)&cd=2&hl=en&ct=clnk&gl=us
 
--
+-To Do:
+-make graphing work
+-make it reset at the end of the period
+-view buget history

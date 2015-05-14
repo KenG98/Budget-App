@@ -10,18 +10,19 @@ import Foundation
 import UIKit
 class BudgetHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var budgetTable: UITableView!
+    
+    @IBAction func backPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var total = 0
-        for var i = 0; i < theBudget.categories.count; i++ {
-            total += theBudget.categories[i].getSpendingSize()
-        }
-        return total
+        return theBudget.oldSpendings.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.budgetTable.dequeueReusableCellWithIdentifier("categorizedCell") as! UITableViewCell
-        cell.textLabel?.text = theBudget.categories[indexPath.row].name
-        cell.detailTextLabel?.text = "\(doubleToMoney(theBudget.categories[indexPath.row].moneySpent)) / \(doubleToMoney(theBudget.categories[indexPath.row].budget))"
+        var cell:UITableViewCell = self.budgetTable.dequeueReusableCellWithIdentifier("historyCell") as! UITableViewCell
+        cell.textLabel?.text = theBudget.oldSpendings[indexPath.row].name
+        cell.detailTextLabel?.text = doubleToMoney(theBudget.oldSpendings[indexPath.row].amount)
         return cell
     }
 }

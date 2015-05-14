@@ -163,29 +163,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-7I-e0S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-7I-e0S">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5RU-nY-u3b">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" textLabel="5br-KL-xyF" detailTextLabel="4ys-lI-S5n" style="IBUITableViewCellStyleValue1" id="5RU-nY-u3b">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5RU-nY-u3b" id="kfe-tj-cL3">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SpendingName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5br-KL-xyF">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="$$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ys-lI-S5n">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="r8D-dB-Hhl" id="jop-hs-cSa"/>
+                                    <outlet property="delegate" destination="r8D-dB-Hhl" id="pLI-u1-cSh"/>
+                                </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-6O-m78">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-6O-m78">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="SO1-3b-Dee">
-                                        <barButtonItem key="leftBarButtonItem" title="Done" id="zbq-hq-5fB"/>
+                                    <navigationItem title="History" id="SO1-3b-Dee">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="zbq-hq-5fB">
+                                            <connections>
+                                                <action selector="backPressed:" destination="r8D-dB-Hhl" id="9gA-Kt-3JG"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mVJ-6O-m78" secondAttribute="trailing" constant="-16" id="1dH-0G-xiV"/>
+                            <constraint firstItem="ahd-7I-e0S" firstAttribute="top" secondItem="eaB-gt-JXV" secondAttribute="bottom" constant="44" id="DTl-k2-fAD"/>
+                            <constraint firstItem="mVJ-6O-m78" firstAttribute="top" secondItem="eaB-gt-JXV" secondAttribute="bottom" id="aSw-UJ-JbP"/>
+                            <constraint firstItem="mVJ-6O-m78" firstAttribute="leading" secondItem="pqE-uI-Oj3" secondAttribute="leadingMargin" constant="-16" id="q2X-t4-1Rz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="budgetTable" destination="ahd-7I-e0S" id="edU-FN-VtG"/>

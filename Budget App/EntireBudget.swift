@@ -94,7 +94,13 @@ class EntireBudget: NSObject, NSCoding{
         return allSpendings
     }
     
-    
+    func periodPassed(){
+        oldSpendings += getAllSpendingsSorted()
+        for category in categories{
+            category.spendings = []
+        }
+        saveBudget()
+    }
     
     override init(){
         categories = []

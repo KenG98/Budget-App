@@ -16,5 +16,6 @@ class SettingsVC: UIViewController{
         for spending in spendings{
             println("\(spending.dateTime): \(spending.name)")
         }
+        theBudget.periodPassed()
     }
 }
