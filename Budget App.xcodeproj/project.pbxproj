@@ -12,6 +12,7 @@
 		1EC3363E1B03B37A00A0B1A5 /* BudgetHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */; };
 		1EDE09C41AF40425003AF18D /* RemoveCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */; };
 		1EDE09C71AF57A61003AF18D /* HowToUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */; };
+		1EF158B71B04EBB4001E2F7F /* ViewHistoricSpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF158B61B04EBB4001E2F7F /* ViewHistoricSpendingVC.swift */; };
 		EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77CBF31ADB5116008FE01A /* SpendingVC.swift */; };
 		EE8C685C1AB0A24800641A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C685B1AB0A24800641A7F /* AppDelegate.swift */; };
 		EE8C685E1AB0A24800641A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C685D1AB0A24800641A7F /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetHistoryVC.swift; sourceTree = "<group>"; };
 		1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveCategoryVC.swift; sourceTree = "<group>"; };
 		1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseVC.swift; sourceTree = "<group>"; };
+		1EF158B61B04EBB4001E2F7F /* ViewHistoricSpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHistoricSpendingVC.swift; sourceTree = "<group>"; };
 		47B542222FED88E8894B7C65 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE99BA8833309ACA41CB4E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EE29123D1B041CF1004CFC31 /* JBChartView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JBChartView-Bridging-Header.h"; path = "../JBChartView-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				EE77CBF31ADB5116008FE01A /* SpendingVC.swift */,
 				1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */,
 				EEBB83EA1AD598B600BD14AA /* SpendVC.swift */,
+				1EF158B61B04EBB4001E2F7F /* ViewHistoricSpendingVC.swift */,
 				EEEDBCC31AF1C0C300CAA407 /* AddCategoryVC.swift */,
 				1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */,
 				1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */,
@@ -332,6 +335,7 @@
 				EE8C685E1AB0A24800641A7F /* ViewController.swift in Sources */,
 				1EDE09C71AF57A61003AF18D /* HowToUseVC.swift in Sources */,
 				1E4F166C1AF84769004CE364 /* EditSpendingVC.swift in Sources */,
+				1EF158B71B04EBB4001E2F7F /* ViewHistoricSpendingVC.swift in Sources */,
 				1EDE09C41AF40425003AF18D /* RemoveCategoryVC.swift in Sources */,
 				EEEDBCC41AF1C0C300CAA407 /* AddCategoryVC.swift in Sources */,
 				EEBB83E91AD598A700BD14AA /* StatsVC.swift in Sources */,

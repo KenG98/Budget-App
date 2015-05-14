@@ -1129,10 +1129,10 @@
             </objects>
             <point key="canvasLocation" x="3623" y="-1093"/>
         </scene>
-        <!--SpendingVC-->
+        <!--View Historic SpendingVC-->
         <scene sceneID="RgV-6o-hue">
             <objects>
-                <viewController id="YBC-fn-7V7" customClass="SpendingVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YBC-fn-7V7" customClass="ViewHistoricSpendingVC" customModule="Budget_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KhX-3v-THG"/>
                         <viewControllerLayoutGuide type="bottom" id="550-vz-Qf3"/>
