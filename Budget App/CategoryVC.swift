@@ -36,11 +36,14 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             var uiAlert = UIAlertController(title: "Wait", message: "Do you want to save your changes?", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(uiAlert, animated: true, completion: nil)
             
-            uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                
+            uiAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
+                self.dismissViewControllerAnimated(true, completion: nil)
             }))
             
-            uiAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
+            uiAlert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { action in
+                for var i = 0; i < self.temp.count; i++ {
+                   self.category.addSpending(self.temp[i])
+                }
                 self.dismissViewControllerAnimated(true, completion: nil)
                 
             }))
