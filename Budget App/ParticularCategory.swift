@@ -26,6 +26,9 @@ class ParticularCategory: NSObject, NSCoding{
     func removeSpending(index: Int){
         spendings.removeAtIndex(index)
     }
+    func getSpendingAt(index: Int) -> ParticularSpending {
+        return spendings[index]
+    }
     
     func removeSpending2(spending: ParticularSpending) {
         for var i = 0; i < spendings.count; i++ {

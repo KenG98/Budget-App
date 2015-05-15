@@ -19,4 +19,5 @@
 -To Do:
 -make graphing work
 -make it reset at the end of the period
--view buget history
+-view buget history - done
+-allow user to cancel changes in categoryVC

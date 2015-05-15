@@ -15,7 +15,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     var category = ParticularCategory(name: "Loading...", budget: 0) //change this later
-    
+    var temp: [ParticularSpending] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.topItem?.title = category.name
@@ -32,12 +32,21 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBAction func backPressed(sender: UIBarButtonItem) {
         if spendingsTable.editing{
-            let alert = UIAlertView()
-            alert.title = "Wait!"
-            alert.message = "Save your changes before going back."
-            alert.addButtonWithTitle("Okay")
-            alert.show()
-        }else{
+            
+            var uiAlert = UIAlertController(title: "Wait", message: "Do you want to save your changes?", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(uiAlert, animated: true, completion: nil)
+            
+            uiAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                
+            }))
+            
+            uiAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
+                self.dismissViewControllerAnimated(true, completion: nil)
+                
+            }))
+            
+        }
+         else {
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
@@ -69,6 +78,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        temp.append(category.getSpendingAt(indexPath.row))
         category.removeSpending(indexPath.row)
         spendingsTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         saveBudget()
