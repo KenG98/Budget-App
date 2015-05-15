@@ -18,6 +18,13 @@ class BudgetHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return theBudget.oldSpendings.count
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        var path = budgetTable.indexPathForSelectedRow()
+        if let deselectPath = path {
+            budgetTable.deselectRowAtIndexPath(deselectPath, animated: true)
+        }
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.budgetTable.dequeueReusableCellWithIdentifier("historyCell") as! UITableViewCell
