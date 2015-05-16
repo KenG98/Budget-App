@@ -15,7 +15,7 @@ class ViewHistoricSpendingVC: UIViewController{
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var spendingDate: UILabel!
     
-    var spending = ParticularSpending(name: "Loading...", memo: "Loading...", dateTime: NSDate(), amount: 0.0) //change this later
+    var spending = ParticularSpending(name: "Loading...", memo: "Loading...", dateTime: NSDate(), amount: 0.0)
     override func viewWillAppear(animated: Bool) {
         navBar.topItem?.title = spending.name
         amountLabel.text = doubleToMoney(spending.amount)

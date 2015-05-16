@@ -167,19 +167,19 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" textLabel="5br-KL-xyF" detailTextLabel="4ys-lI-S5n" style="IBUITableViewCellStyleValue1" id="5RU-nY-u3b">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" textLabel="F0a-q1-J6C" detailTextLabel="bH8-JB-a62" style="IBUITableViewCellStyleValue1" id="5RU-nY-u3b">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5RU-nY-u3b" id="kfe-tj-cL3">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SpendingName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5br-KL-xyF">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F0a-q1-J6C">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="$$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ys-lI-S5n">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bH8-JB-a62">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -214,6 +214,8 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mVJ-6O-m78" secondAttribute="trailing" constant="-16" id="1dH-0G-xiV"/>
                             <constraint firstItem="ahd-7I-e0S" firstAttribute="top" secondItem="eaB-gt-JXV" secondAttribute="bottom" constant="44" id="DTl-k2-fAD"/>
+                            <constraint firstItem="ahd-7I-e0S" firstAttribute="leading" secondItem="pqE-uI-Oj3" secondAttribute="leadingMargin" constant="-16" id="GQg-zJ-lpB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ahd-7I-e0S" secondAttribute="trailing" constant="-16" id="UT3-nb-03q"/>
                             <constraint firstItem="mVJ-6O-m78" firstAttribute="top" secondItem="eaB-gt-JXV" secondAttribute="bottom" id="aSw-UJ-JbP"/>
                             <constraint firstItem="mVJ-6O-m78" firstAttribute="leading" secondItem="pqE-uI-Oj3" secondAttribute="leadingMargin" constant="-16" id="q2X-t4-1Rz"/>
                         </constraints>

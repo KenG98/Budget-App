@@ -17,7 +17,26 @@
 -"User defined runtime attributes" to fix tab bar image for selected image (apple's bug... this is just a workaround meanwhile. change it later). We still get an error when the app starts about imvalid asset name supplied. This is a bug on apple's part and i added a workaround. We'll need to change it when its fixed. http://webcache.googleusercontent.com/search?q=cache:6HsdUnPyRtsJ:stackoverflow.com/questions/25612842/xcode-6-beta-6-cuicatalog-invalid-asset-name-supplied-null-or-invalid-scale+CUICatalog:+Invalid+asset+name+supplied:+(null)&cd=2&hl=en&ct=clnk&gl=us
 
 -To Do:
+
 -make graphing work
+    -For this, perhaps have some way of allowing the user to choose between various sorts of graphs?
 -make it reset at the end of the period
--view buget history - done
--allow user to cancel changes in categoryVC
+-Allow user to add recurring spendings
+
+Extra stuff:
+-Redesign app using new views
+-We could add images to the how to use tab. Have it like a slide show of sorts page view controller wud be good for this
+-May want to redesign the accessibility of information for the user. Perhaps drop down menu for each category to avoid using an entirley seperate view or a static table view, having the catgeories be seperators.
+-Use custom images where possible to improve UI
+-Iads
+-Visualize money spent on overviewvc. Progress bar perhaps for money spent or something like that would be cool
+-Maybe also add like a plus button in the categoryv in case the user wants to add something in there? I found myself personally wanting to be able to spend from in there. This would be fixed by redesigning the way this all works though
+
+Extra Stuff if we really wanna go ham:
+-Allow users to create an account, and have everything tied to the account
+-Some sort of Facebook/Twitter integration?
+
+
+
+
+
