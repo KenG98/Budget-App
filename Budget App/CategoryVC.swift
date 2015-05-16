@@ -13,7 +13,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var spendingsTable: UITableView!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var editButton: UIBarButtonItem!
-    
+    var changedData = false
     var category = ParticularCategory(name: "Loading...", budget: 0) //change this later
     var temp: [ParticularSpending] = []
     override func viewDidLoad() {
@@ -32,22 +32,25 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBAction func backPressed(sender: UIBarButtonItem) {
         if spendingsTable.editing{
+            if changedData {
+                var uiAlert = UIAlertController(title: "Wait", message: "Do you want to save your changes?", preferredStyle: UIAlertControllerStyle.Alert)
+                self.presentViewController(uiAlert, animated: true, completion: nil)
             
-            var uiAlert = UIAlertController(title: "Wait", message: "Do you want to save your changes?", preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(uiAlert, animated: true, completion: nil)
+                uiAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }))
             
-            uiAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }))
-            
-            uiAlert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { action in
-                for var i = 0; i < self.temp.count; i++ {
-                   self.category.addSpending(self.temp[i])
-                }
-                self.dismissViewControllerAnimated(true, completion: nil)
+                uiAlert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { action in
+                    for var i = 0; i < self.temp.count; i++ {
+                        self.category.addSpending(self.temp[i])
+                    }
+                    self.dismissViewControllerAnimated(true, completion: nil)
                 
-            }))
+                }))
             
+            } else {
+                dismissViewControllerAnimated(true, completion: nil)
+            }
         }
          else {
             dismissViewControllerAnimated(true, completion: nil)
@@ -61,6 +64,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }else{
             spendingsTable.setEditing(true, animated: true)
             editButton.title = "Save Changes"
+            changedData = false
         }
     }
     
@@ -85,6 +89,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         category.removeSpending(indexPath.row)
         spendingsTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         saveBudget()
+        changedData = true
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
