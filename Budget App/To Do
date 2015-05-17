@@ -20,6 +20,7 @@
 
 -make graphing work
     -For this, perhaps have some way of allowing the user to choose between various sorts of graphs?
+    -Need to create a way to hold data on a day by day bases
 -make it reset at the end of the period
 -Allow user to add recurring spendings
 

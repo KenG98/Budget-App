@@ -40,7 +40,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }))
             
-                uiAlert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { action in
+                uiAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
                     for var i = 0; i < self.temp.count; i++ {
                         self.category.addSpending(self.temp[i])
                     }
@@ -64,6 +64,7 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }else{
             spendingsTable.setEditing(true, animated: true)
             editButton.title = "Save Changes"
+            temp.removeAll(keepCapacity: false)
             changedData = false
         }
     }

@@ -29,7 +29,7 @@ class BudgetHistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.budgetTable.dequeueReusableCellWithIdentifier("historyCell") as! UITableViewCell
         cell.textLabel?.text = theBudget.oldSpendings[indexPath.row].name
-        cell.detailTextLabel?.text = doubleToMoney(theBudget.oldSpendings[indexPath.row].amount)// this isn't working for some reason
+        cell.detailTextLabel?.text = doubleToMoney(theBudget.oldSpendings[indexPath.row].amount)
         return cell
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
