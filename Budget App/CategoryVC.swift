@@ -35,11 +35,6 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             if changedData {
                 var uiAlert = UIAlertController(title: "Wait", message: "Do you want to save your changes?", preferredStyle: UIAlertControllerStyle.Alert)
                 self.presentViewController(uiAlert, animated: true, completion: nil)
-            
-                uiAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                }))
-            
                 uiAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
                     for var i = 0; i < self.temp.count; i++ {
                         self.category.addSpending(self.temp[i])
@@ -47,6 +42,11 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     self.dismissViewControllerAnimated(true, completion: nil)
                 
                 }))
+                uiAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }))
+            
+                
             
             } else {
                 dismissViewControllerAnimated(true, completion: nil)

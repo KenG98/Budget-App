@@ -29,18 +29,18 @@ class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBAction func deleteClicked(sender: UIButton) {
         
         // IMPORTANT- ask the user if they're sure. tell them everything will be deleted.
-        var uiAlert = UIAlertController(title: "Wait", message: "Are you sure you want to delet this category?", preferredStyle: UIAlertControllerStyle.Alert)
+        var uiAlert = UIAlertController(title: "Wait", message: "Are you sure you want to delete this category?", preferredStyle: UIAlertControllerStyle.Alert)
         self.presentViewController(uiAlert, animated: true, completion: nil)
-        
+        uiAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
+            
+        }))
         uiAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
             theBudget.removeCategory(self.categoryPicker.selectedRowInComponent(0))
             self.dismissViewControllerAnimated(true, completion: nil)
             saveBudget()
         }))
         
-        uiAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
-            
-        }))
+        
         
     }
 }
