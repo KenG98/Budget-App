@@ -8,19 +8,23 @@
 
 import UIKit
 
-class StatsVC: UIViewController, JBBarChartViewDelegate, JBBarChartViewDataSource {
+class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSource {
+    
+    var rawSpendings: [ParticularSpending] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let barChartView = JBBarChartView();
-        barChartView.dataSource = self;
-        barChartView.delegate = self;
-        barChartView.backgroundColor = UIColor.darkGrayColor();
-        barChartView.frame = CGRectMake(0, 20, self.view.bounds.width, self.view.bounds.height * 0.5);
-        barChartView.reloadData();
-        self.view.addSubview(barChartView);
-        println("Launched");
+        self.rawSpendings = theBudget.getAllSpendingsSorted()
+        
+        let lineChartView = JBLineChartView()
+        lineChartView.dataSource = self
+        lineChartView.delegate = self
+        lineChartView.backgroundColor = UIColor.whiteColor()
+        lineChartView.frame = CGRectMake(0, 20, self.view.bounds.width, self.view.bounds.height * 0.5)
+        lineChartView.reloadData()
+        self.view.addSubview(lineChartView)
+        println("Launched")
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,15 +32,16 @@ class StatsVC: UIViewController, JBBarChartViewDelegate, JBBarChartViewDataSourc
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfBarsInBarChartView(barChartView: JBBarChartView!) -> UInt {
-        println("numberOfBarsInBarChartView");
-        return 10 //number of lines in chart
+    func lineChartView(lineChartView: JBLineChartView!, verticalValueForHorizontalIndex horizontalIndex: UInt, atLineIndex lineIndex: UInt) -> CGFloat {
+        return CGFloat(arc4random_uniform(100)) //CHANGE THIS
     }
     
-    func barChartView(barChartView: JBBarChartView, heightForBarViewAtIndex index: UInt) -> CGFloat {
-        println("barChartView", index);
-        
-        return CGFloat(arc4random_uniform(100));
+    func numberOfLinesInLineChartView(lineChartView: JBLineChartView!) -> UInt {
+        return 1 //CHANGE THIS
+    }
+    
+    func lineChartView(lineChartView: JBLineChartView!, numberOfVerticalValuesAtLineIndex lineIndex: UInt) -> UInt {
+        return 1 //MAYBE change this
     }
     
 }
