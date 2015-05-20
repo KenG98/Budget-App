@@ -20,7 +20,7 @@ class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSou
         let lineChartView = JBLineChartView()
         lineChartView.dataSource = self
         lineChartView.delegate = self
-        lineChartView.backgroundColor = UIColor.whiteColor()
+        lineChartView.backgroundColor = UIColor.lightGrayColor()
         lineChartView.frame = CGRectMake(0, 20, self.view.bounds.width, self.view.bounds.height * 0.5)
         lineChartView.reloadData()
         self.view.addSubview(lineChartView)
@@ -33,7 +33,7 @@ class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSou
     }
     
     func lineChartView(lineChartView: JBLineChartView!, verticalValueForHorizontalIndex horizontalIndex: UInt, atLineIndex lineIndex: UInt) -> CGFloat {
-        return CGFloat(arc4random_uniform(100)) //CHANGE THIS
+        return CGFloat(arc4random()) //CHANGE THIS
     }
     
     func numberOfLinesInLineChartView(lineChartView: JBLineChartView!) -> UInt {
@@ -41,7 +41,10 @@ class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSou
     }
     
     func lineChartView(lineChartView: JBLineChartView!, numberOfVerticalValuesAtLineIndex lineIndex: UInt) -> UInt {
-        return 1 //MAYBE change this
+        return 20 //MAYBE change this
     }
     
+    func lineChartView(lineChartView: JBLineChartView!, colorForLineAtLineIndex lineIndex: UInt) -> UIColor! {
+        return UIColor.blackColor()
+    }
 }
