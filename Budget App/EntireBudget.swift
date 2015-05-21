@@ -16,6 +16,11 @@ class EntireBudget: NSObject, NSCoding{
             return periodStart.dateByAddingTimeInterval(periodLength)
         }
     }
+    var periodTimePassed: NSTimeInterval{
+        get{
+            return NSDate().timeIntervalSinceDate(periodStart)
+        }
+    }
     var periodRemaining: NSTimeInterval{
         get{
             return periodEnd.timeIntervalSinceDate(NSDate())
