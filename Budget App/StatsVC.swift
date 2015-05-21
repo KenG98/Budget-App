@@ -24,12 +24,15 @@ class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSou
     
     var graphValues: [Double] = []
     var predictedFinal: Double = 0
+    var portionPassed: Double = 0
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        graphValues = []
         var rawSpendings: [ParticularSpending] = theBudget.getAllSpendingsSorted()
         let periodInterval: Double = theBudget.periodLength/100
+        portionPassed = theBudget.periodTimePassed/theBudget.periodLength
         
         func spentOnOrBefore(date: NSDate) -> Double{
             var totalSpent: Double = 0
@@ -46,7 +49,8 @@ class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSou
             graphValues.append(spentOnOrBefore(theBudget.periodStart.dateByAddingTimeInterval(NSTimeInterval(Double(i)*periodInterval))))
         }
         
-        predictedFinal = graphValues.last! / (theBudget.periodTimePassed/theBudget.periodLength)
+        
+        predictedFinal = graphValues.last! / portionPassed
         
         let lineChartView = JBLineChartView()
         lineChartView.dataSource = self

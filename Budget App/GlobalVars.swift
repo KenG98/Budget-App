@@ -20,6 +20,13 @@ func loadBudget(){
     if (budgetData != nil){
         theBudget = NSKeyedUnarchiver.unarchiveObjectWithData(budgetData!) as! EntireBudget
     }
+    checkPassedRenewal()
+}
+
+func checkPassedRenewal(){
+    if theBudget.periodEnd.timeIntervalSinceDate(NSDate()) < 0{
+        theBudget.periodPassed()
+    }
 }
 
 var moneyFormat = NSNumberFormatter()
