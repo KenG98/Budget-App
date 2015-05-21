@@ -28,7 +28,7 @@ class SettingsVC: UIViewController{
         let someTime = 40320 //two weeks divided by 30, i want to get 3,000 dollars spent in 2 weeks (less than half of 8,000) - average 100 per purchase
         let testCategory = theBudget.categories[0]
         for i in 1...30{
-            testCategory.addSpending("test", memo: "", date: theBudget.periodStart.dateByAddingTimeInterval(NSTimeInterval(i*someTime)), amount: Double(arc4random_uniform(200)))
+            testCategory.addSpending("test", memo: "", date: theBudget.periodStart.dateByAddingTimeInterval(NSTimeInterval(i*someTime)), amount: Double(arc4random_uniform(250)))
         }
     }
 }

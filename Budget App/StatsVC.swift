@@ -70,7 +70,10 @@ class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSou
     
     func lineChartView(lineChartView: JBLineChartView!, verticalValueForHorizontalIndex horizontalIndex: UInt, atLineIndex lineIndex: UInt) -> CGFloat {
         if lineIndex == 0{
-            return CGFloat(graphValues[Int(horizontalIndex)])
+            if horizontalIndex <= UInt(ceil(100 * portionPassed)){
+                return CGFloat(graphValues[Int(horizontalIndex)])
+            }
+            return CGFloat.NaN
         }
         if lineIndex == 1{
             if horizontalIndex == 0{
