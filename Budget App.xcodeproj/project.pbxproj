@@ -205,8 +205,8 @@
 				1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */,
 				EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */,
 				1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */,
-				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
 				EEBB83E41AD5989000BD14AA /* MainVC.swift */,
+				EEBB83E81AD598A700BD14AA /* StatsVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

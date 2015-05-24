@@ -22,6 +22,11 @@ import UIKit
 
 class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSource {
     
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var predictionLabel: UILabel!
+    @IBOutlet weak var dollarsLabel: UILabel!
+    @IBOutlet weak var dayCount: UILabel!
+    
     var graphValues: [Double] = []
     var predictedFinal: Double = 0
     var portionPassed: Double = 0
@@ -44,23 +49,42 @@ class StatsVC: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSou
             return totalSpent
         }
         
-        //graphValues is initiated for entire class
         for i in 0..<100{
             graphValues.append(spentOnOrBefore(theBudget.periodStart.dateByAddingTimeInterval(NSTimeInterval(Double(i)*periodInterval))))
         }
         
-        
         predictedFinal = graphValues.last! / portionPassed
         
+        //other calculations and displaying
+        if theBudget.totalSpent < theBudget.totalBudget{
+            statusLabel.text = "Under Budget"
+            statusLabel.textColor = UIColor(red: 0, green: 0.7, blue: 0, alpha: 1)
+        }
+        else{
+            statusLabel.text = "Over Budget"
+            statusLabel.textColor = UIColor.redColor()
+        }
+        if predictedFinal < theBudget.totalBudget{
+            predictionLabel.text = "Under Budget"
+            predictionLabel.textColor = UIColor(red: 0, green: 0.7, blue: 0, alpha: 1)
+        }
+        else{
+            predictionLabel.text = "Over Budget"
+            predictionLabel.textColor = UIColor.redColor()
+        }
+        dollarsLabel.text = "Spent:        \(doubleToMoney(theBudget.totalSpent)) \nRemaining: \(doubleToMoney(theBudget.totalBudget-theBudget.totalSpent))"
+        dayCount.text = "Days passed: \(floor(theBudget.periodTimePassed/86400))\nDays left:        \(ceil(theBudget.periodRemaining/86400))"
+        
+        
+        //display the chart
         let lineChartView = JBLineChartView()
         lineChartView.dataSource = self
         lineChartView.delegate = self
         lineChartView.backgroundColor = UIColor.lightGrayColor()
-        lineChartView.frame = CGRectMake(0, 20, self.view.bounds.width, self.view.bounds.height * 0.5)
+        lineChartView.frame = CGRectMake(0, 20, self.view.bounds.width, self.view.bounds.height * 0.47 - 20)
         lineChartView.maximumValue *= 1.1
         lineChartView.reloadData()
         self.view.addSubview(lineChartView)
-        println("Launched")
     }
     
     override func didReceiveMemoryWarning() {
