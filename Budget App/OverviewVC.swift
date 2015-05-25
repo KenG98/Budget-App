@@ -13,6 +13,7 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var categoryTableView: UITableView!
     
+    @IBOutlet weak var goToCategoriesLabel: UILabel!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         totalLabel.text = "Total: \(doubleToMoney(theBudget.totalSpent)) / \(doubleToMoney(theBudget.totalBudget))"
@@ -20,27 +21,43 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if let deselectPath = path {
            categoryTableView.deselectRowAtIndexPath(deselectPath, animated: true)
         }
+        
         categoryTableView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return theBudget.categories.count
+        if theBudget.categories.count != 0 {
+            return theBudget.categories.count
+        }
+            return 1
+        
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.categoryTableView.dequeueReusableCellWithIdentifier("categorizedCell") as! UITableViewCell
-        cell.textLabel?.text = theBudget.categories[indexPath.row].name
-        cell.detailTextLabel?.text = "\(doubleToMoney(theBudget.categories[indexPath.row].moneySpent)) / \(doubleToMoney(theBudget.categories[indexPath.row].budget))"
-        return cell
+        if theBudget.categories.count != 0{
+            var cell:UITableViewCell = self.categoryTableView.dequeueReusableCellWithIdentifier("categorizedCell") as! UITableViewCell
+            cell.textLabel?.text = theBudget.categories[indexPath.row].name
+            cell.detailTextLabel?.text = "\(doubleToMoney(theBudget.categories[indexPath.row].moneySpent)) / \(doubleToMoney(theBudget.categories[indexPath.row].budget))"
+            return cell
+        }
+        else {
+            var cell:UITableViewCell = self.categoryTableView.dequeueReusableCellWithIdentifier("addCategory") as! UITableViewCell
+            cell.textLabel?.text = "Go to settings to add categories"
+            cell.detailTextLabel?.text = " "
+            
+            return cell
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "categoryPressed"{
+        if segue.identifier == "categoryPressed" {
             if let destination = segue.destinationViewController as? CategoryVC{
                 if let index = categoryTableView.indexPathForSelectedRow()?.row{
                     destination.category = theBudget.categories[index]
                 }
             }
         }
+        
     }
 }
