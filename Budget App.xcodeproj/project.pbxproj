@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E3CBD671B13BC68005ED884 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3CBD661B13BC68005ED884 /* ContentViewController.swift */; };
 		1E4F166C1AF84769004CE364 /* EditSpendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */; };
 		1E4F166E1AFA5E3C004CE364 /* ChangePeriodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */; };
 		1EC3363E1B03B37A00A0B1A5 /* BudgetHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E3CBD661B13BC68005ED884 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		1E4F166B1AF84769004CE364 /* EditSpendingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSpendingVC.swift; sourceTree = "<group>"; };
 		1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePeriodVC.swift; sourceTree = "<group>"; };
 		1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetHistoryVC.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				EEEDBCC31AF1C0C300CAA407 /* AddCategoryVC.swift */,
 				1EDE09C31AF40425003AF18D /* RemoveCategoryVC.swift */,
 				1EDE09C61AF57A61003AF18D /* HowToUseVC.swift */,
+				1E3CBD661B13BC68005ED884 /* ContentViewController.swift */,
 				1E4F166D1AFA5E3C004CE364 /* ChangePeriodVC.swift */,
 				EEBB83E61AD5989D00BD14AA /* SettingsVC.swift */,
 				1EC3363D1B03B37A00A0B1A5 /* BudgetHistoryVC.swift */,
@@ -360,6 +363,7 @@
 				EEBB83F91AD5B4F600BD14AA /* GlobalVars.swift in Sources */,
 				EEBB83E71AD5989D00BD14AA /* SettingsVC.swift in Sources */,
 				1EC3363E1B03B37A00A0B1A5 /* BudgetHistoryVC.swift in Sources */,
+				1E3CBD671B13BC68005ED884 /* ContentViewController.swift in Sources */,
 				EE77CBF41ADB5116008FE01A /* SpendingVC.swift in Sources */,
 				EEBB83ED1AD5993900BD14AA /* OverviewVC.swift in Sources */,
 				EEBB83EB1AD598B600BD14AA /* SpendVC.swift in Sources */,
