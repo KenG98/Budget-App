@@ -13,6 +13,7 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var categoryTableView: UITableView!
     
+    @IBOutlet weak var spendButton: UIButton!
     @IBOutlet weak var goToCategoriesLabel: UILabel!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,9 +22,14 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if let deselectPath = path {
            categoryTableView.deselectRowAtIndexPath(deselectPath, animated: true)
         }
-        
+        if theBudget.categories.count == 0 {
+            spendButton.hidden = true
+        } else {
+            spendButton.hidden = false
+        }
         categoryTableView.reloadData()
     }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if theBudget.categories.count != 0 {

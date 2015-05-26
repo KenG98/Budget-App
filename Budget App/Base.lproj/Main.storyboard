@@ -786,6 +786,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="categoryTableView" destination="udn-6M-mg9" id="1sW-Iw-UtX"/>
+                        <outlet property="spendButton" destination="JA0-yB-NSt" id="BNx-Lc-u0H"/>
                         <outlet property="totalLabel" destination="sDi-rR-9AL" id="OvL-dj-wOB"/>
                     </connections>
                 </viewController>
