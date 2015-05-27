@@ -50,6 +50,7 @@ class EntireBudget: NSObject, NSCoding{
     func addCategory(name: String, budget: Double) -> Bool{
         //checks if a category with this name already exists, if not it adds the category
         var success = true
+        
         for cat in categories{
             //Doesnt check for case. make it case sensitive
             if cat.name == name{
