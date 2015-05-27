@@ -939,6 +939,7 @@
                     <connections>
                         <outlet property="amountBox" destination="yFc-eh-Ayk" id="ViQ-qN-Rn1"/>
                         <outlet property="categoryPicker" destination="U9c-Fo-VdA" id="xEX-DE-6GQ"/>
+                        <outlet property="memoBox" destination="hp1-gB-0Ll" id="J8m-dN-G4x"/>
                         <outlet property="nameBox" destination="WI4-JZ-kLi" id="4Lh-Fs-Pm6"/>
                     </connections>
                 </viewController>
