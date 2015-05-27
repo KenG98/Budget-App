@@ -16,7 +16,6 @@ class AddCategoryVC: UIViewController {
     
     @IBAction func addCategoryPressed(sender: UIButton) {
         var didWork = theBudget.addCategory(nameBox.text, budget: (amountBox.text as NSString).doubleValue)
-        //IMPORTANT. Do error handling here. Check for proper input. Super unsafe as it is now.
         
         if didWork{
             dismissViewControllerAnimated(true, completion: nil)

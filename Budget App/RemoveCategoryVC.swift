@@ -28,8 +28,7 @@ class RemoveCategoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     @IBAction func deleteClicked(sender: UIButton) {
         
-        // IMPORTANT- ask the user if they're sure. tell them everything will be deleted.
-        var uiAlert = UIAlertController(title: "Wait", message: "Are you sure you want to delete this category?", preferredStyle: UIAlertControllerStyle.Alert)
+        var uiAlert = UIAlertController(title: "Wait", message: "Are you sure you want to delete this category? All spendings in the category will be erased, and it can't be undone.", preferredStyle: UIAlertControllerStyle.Alert)
         self.presentViewController(uiAlert, animated: true, completion: nil)
         uiAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
             

@@ -31,4 +31,19 @@ class SettingsVC: UIViewController{
             testCategory.addSpending("test", memo: "", date: theBudget.periodStart.dateByAddingTimeInterval(NSTimeInterval(i*someTime)), amount: Double(arc4random_uniform(250)))
         }
     }
+    @IBAction func removeDataPressed(sender: UIButton) {
+        var uiAlert = UIAlertController(title: "Wait", message: "This deletes all of your information permanently. Are you sure?", preferredStyle: UIAlertControllerStyle.Alert)
+        self.presentViewController(uiAlert, animated: true, completion: nil)
+        uiAlert.addAction(UIAlertAction(title: "No", style: .Default, handler: { action in
+            
+        }))
+        uiAlert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
+            theBudget.categories = []
+            saveBudget()
+        }))
+
+    }
+    @IBAction func testHistoryPressed(sender: UIButton) {
+        theBudget.periodPassed()
+    }
 }

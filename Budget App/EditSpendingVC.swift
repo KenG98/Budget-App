@@ -35,6 +35,13 @@ class EditSpendingVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         categoryPicker.selectRow(categoryIndex, inComponent: 0, animated: true)
     }
+    
+    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
+        amountBox.resignFirstResponder()
+        nameBox.resignFirstResponder()
+        memoBox.resignFirstResponder()
+    }
+    
     @IBAction func cancelPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }

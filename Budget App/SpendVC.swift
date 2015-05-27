@@ -19,7 +19,7 @@ class SpendVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     @IBAction func spendPressed(sender: UIButton) {
         var purchaseName = nameBox.text
         if purchaseName == "" {
-            purchaseName = "Default"
+            purchaseName = "Default Name"
         }
         if amountBox.text == "" {
             let alert = UIAlertView()
@@ -40,6 +40,12 @@ class SpendVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
+        amountBox.resignFirstResponder()
+        nameBox.resignFirstResponder()
+        memoBox.resignFirstResponder()
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
