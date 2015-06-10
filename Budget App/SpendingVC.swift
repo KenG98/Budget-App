@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
-class SpendingVC: UIViewController{
+class SpendingVC: UIViewController, MFMailComposeViewControllerDelegate{
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var spendingMemo: UITextView!
@@ -38,6 +39,21 @@ class SpendingVC: UIViewController{
     
     @IBAction func backPressed(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func sharePressed(sender: UIButton) {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setSubject("Here's my spending.")
+        let calendar = NSCalendar.currentCalendar()
+        let date = spending.dateTime
+        let components = calendar.components(.CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitYear, fromDate: date)
+        let spendingDateText = "\(components.month)-\(components.day)-\(components.year)"
+        mailComposerVC.setMessageBody("Here is my spending. \nName: '\(spending.name)'.\nWhen: \(spendingDateText) \nAmount: \(doubleToMoney(spending.amount)) \nMemo: \(spending.memo)", isHTML: false)
+        self.presentViewController(mailComposerVC, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

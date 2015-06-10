@@ -45,6 +45,13 @@ class OverviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             var cell:UITableViewCell = self.categoryTableView.dequeueReusableCellWithIdentifier("categorizedCell") as! UITableViewCell
             cell.textLabel?.text = theBudget.categories[indexPath.row].name
             cell.detailTextLabel?.text = "\(doubleToMoney(theBudget.categories[indexPath.row].moneySpent)) / \(doubleToMoney(theBudget.categories[indexPath.row].budget))"
+            let spent = theBudget.categories[indexPath.row].moneySpent
+            let budget = theBudget.categories[indexPath.row].budget
+            if spent >= budget {
+                cell.backgroundColor = UIColor(red: 250/255, green: 140/255, blue: 160/255, alpha: 255/255)
+            }else{
+                cell.backgroundColor = UIColor(red: 152/255, green: 251/255, blue: 152/255, alpha: 255/255)
+            }
             return cell
         }
         else {
